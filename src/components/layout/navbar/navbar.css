@@ -1,0 +1,22 @@
+.nav__search__input{
+    background-color: unset;
+    width: 100%;
+    color: #9D9AA2;
+    outline: unset ;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+.nav__search {
+    background-color: #413F45;
+    padding: 5px 8px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.login__btn{
+    background-color: #413F45;
+    padding: 5px;
+    border-radius: 8px;
+    outline: unset;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSection from '../components/feature/heroSection';
-import Navbar from '../components/layout/navbar';
+import HeroSection from '../components/feature/heroSection/heroSection';
+import Navbar from '../components/layout/navbar/navbar';
 
 const Home = () => {
     return (

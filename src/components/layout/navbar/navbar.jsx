@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import logo from '../../assets/icons/nav__logo.svg'
+import logo from '../../../assets/icons/nav__logo.svg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faSearch, faUser, faUserAlt, faUserCircle, faUsersLine } from "@fortawesome/free-solid-svg-icons";
-import '../../style/home.css'
-import userIcon from '../../assets/icons/user.svg'
+import '../navbar/navbar.css'
+import userIcon from '../../../assets/icons/user.svg'
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
