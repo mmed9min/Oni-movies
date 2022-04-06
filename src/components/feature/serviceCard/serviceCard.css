@@ -1,0 +1,16 @@
+.serviceCard{
+    border: 1px solid #605D65;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.serviceCard:hover{
+    background-color: #413F45;
+}
+.viewAll__btn{
+    color: #fff !important;
+    background-color: #782CE8 !important;
+    text-transform: none !important;
+    border-radius: 5px !important;
+    font-size: 11px !important;
+}

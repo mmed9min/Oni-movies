@@ -1,0 +1,16 @@
+.footer{
+    background-color: #413F45;
+    height: 30vh;
+}
+.footer__txt{
+    max-width: 50%;
+}
+.gray__txt{
+    color: #9D9AA2;
+}
+.donate__btn{
+    color: #fff !important;
+    text-transform: none !important;
+    border:  1px solid #9D9AA2 !important;
+    padding: 3px !important;
+}
