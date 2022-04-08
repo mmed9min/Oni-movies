@@ -1,10 +1,8 @@
 .footer{
     background-color: #413F45;
-    height: 30vh;
+    height: 100%;
 }
-.footer__txt{
-    max-width: 50%;
-}
+
 .gray__txt{
     color: #9D9AA2;
 }

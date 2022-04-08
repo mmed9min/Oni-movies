@@ -3,3 +3,10 @@
  
    
 }
+@media screen and (max-width: 780px){
+    .categoriesTabs{
+        margin-top: 10rem;
+     
+       
+    }
+}

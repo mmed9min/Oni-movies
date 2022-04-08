@@ -87,7 +87,7 @@ const CategoriesTabs = () => {
        setValue(newValue);
      };
     return (
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mt-5 categoriesTabs'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mt-12 md:mt-5 categoriesTabs'>
           <div>
 
         
@@ -99,7 +99,7 @@ const CategoriesTabs = () => {
         <Tab>Bollywood</Tab>
       </TabsList>
       <TabPanel value={0}>
-        <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>

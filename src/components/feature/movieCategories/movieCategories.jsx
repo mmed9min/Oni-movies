@@ -39,7 +39,7 @@ const Tab = styled(TabUnstyled)`
   border-radius : 8px;
   display: flex;
 
-
+  white-space : nowrap;
 
   &:hover {
     background-color: #9d9aa222;
@@ -103,7 +103,7 @@ const MovieCategories = (props) => {
                  
       
       <TabPanel value={0}>
-        <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>
