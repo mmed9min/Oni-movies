@@ -20,3 +20,11 @@
     border-radius: 8px;
     outline: unset;
 }
+.genre__txt{
+    font-size: 14px;
+    color: #9D9AA2;
+    font-weight: 500;
+}
+.genre__txt:hover{
+    color: white;
+}

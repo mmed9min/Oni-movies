@@ -87,7 +87,7 @@ const MovieCategories = (props) => {
        setValue(newValue);
      };
     return (
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-10  mt-10'>
+        <div className=' mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-10'>
           <div>
 
         
@@ -103,7 +103,7 @@ const MovieCategories = (props) => {
                  
       
       <TabPanel value={0}>
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 xl:gap-5 '>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>
@@ -119,7 +119,7 @@ const MovieCategories = (props) => {
         
       </TabPanel>
       <TabPanel value={1}>
-        <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 xl:gap-5 '>
          <MovieCard movieImg={movieImg2}/>
          <MovieCard movieImg={movieImg2}/>
          <MovieCard movieImg={movieImg2}/>
@@ -142,7 +142,7 @@ const MovieCategories = (props) => {
         </div>
       </TabPanel>
       <TabPanel value={2}>
-      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 xl:gap-5'>
         <MovieCard movieImg={movieImg3}/>
         <MovieCard movieImg={movieImg3}/>
         <MovieCard movieImg={movieImg3}/>

@@ -8,7 +8,7 @@ import Navbar from '../components/layout/navbar/navbar';
 
 const Home = () => {
     return (
-        <div className='app__container'>
+        <div className='app__container '>
            <Navbar />
            <HeroSection />
            <CategoriesTabs />

@@ -12,9 +12,9 @@ import { Button } from '@mui/material';
 
 const BrowseService = () => {
     return (
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mt-7 borwseService'>
+        <div className='mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-7 borwseService'>
            <span className='text-white text-xl font-medium'>Browse by service</span> 
-           <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-2 mt-4'>
+           <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-4 mt-4'>
                <ServiceCard img={netflix} name ="Netflix"/>
                <ServiceCard img={prime} name ="Prime video"/>
                <ServiceCard img={disney} name ="Disnep +"/>

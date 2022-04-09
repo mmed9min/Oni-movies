@@ -6,8 +6,12 @@
 .heroCards__row{
     position: absolute;
     top: 90%;
-    left: 1%;
-    width: 96%;
+   left: 0;
+
+}
+.heroCardImage{
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .heroImage:before {
@@ -34,12 +38,13 @@
     /* IE6-9 */
   }
 
-.heroCardImage{
-    width: 10%;
-    border-radius: 6px;
-}
+
 .heroCardImage:focus{
     border: 2px solid #8E51ED;
+    
+}
+.heroCards{
+    max-width: 50%;
 }
 
 
@@ -48,7 +53,7 @@
     top: 35%;
 }
 .hero__movie__descrip{
-    max-width: 600px;
+    max-width: 50%;
 }
 
 .hero__type__txt{
@@ -63,10 +68,17 @@
     font-size: 14px !important;
     text-transform: unset !important;
     font-weight: 400 !important;
-    width: 20% !important;
+    width: 8% !important;
 }
 .like__btn{
     background-color: #605D65 !important;
+    border-radius: 0px 8px 8px 0px    !important;
+    font-weight: 400 !important;
+    margin-left: 3px !important;
+    min-width: 40px !important;
+}
+.unLike__btn{
+    background-color: #782CE8 !important;
     border-radius: 0px 8px 8px 0px    !important;
     font-weight: 400 !important;
     margin-left: 3px !important;
@@ -77,7 +89,10 @@
     border: 1px solid #605D65;
     padding: 5px 8px;
     border-radius: 8px;
-    width: 400px;
+    width: 35%;
+}
+.heroImage > img{
+    width: 100%;
 }
 
 .copy__btn{
@@ -92,7 +107,7 @@
 @media screen and (max-width: 990px){
     .heroCards__row{
       
-        top: 88%;
+        top: 92%;
   
     }
     .hero__movie__details{
@@ -103,10 +118,25 @@
         border: 1px solid #605D65;
         padding: 5px 8px;
         border-radius: 8px;
-        width: 520px;
+      width: 43%;
+    }
+    .hero__movie__descrip > p{
+        max-height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+    .watch__btn{
+        background-color: #782CE8 !important;
+        border-radius: 8px 0px 0px 8px !important;
+        color: white !important;
+        font-size: 11px !important;
+        text-transform: unset !important;
+        font-weight: 400 !important;
+        width: 10% !important;
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     .hero__movie__descrip > p{
         max-height: 15px;
         overflow: hidden;
@@ -122,7 +152,10 @@
         border: 1px solid #605D65;
         padding: 5px 8px;
         border-radius: 8px;
-        width: 320px;
+       width: 70%;
+    }
+    .heroCards{
+        max-width: 75%;
     }
     .hero__movie__details{
         position: absolute;
@@ -143,6 +176,30 @@
         font-weight: 400 !important;
         margin-left: 3px !important;
         min-width: 40px !important;
+    }
+}
+@media screen and (max-width: 520px){
+    .hero__social{
+        width: 90%; 
+    }
+}
+@media screen and (min-width: 1490px){
+    .heroCards__row{
+      
+        top: 89%;
+  
+    }
+   .hero__social{
+       width: 25%;
+   }
+    .watch__btn{
+        background-color: #782CE8 !important;
+        border-radius: 8px 0px 0px 8px !important;
+        color: white !important;
+        font-size: 20px !important;
+        text-transform: unset !important;
+        font-weight: 400 !important;
+        width: 8% !important;
     }
 }
 

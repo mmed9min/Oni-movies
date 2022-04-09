@@ -1,11 +1,19 @@
 .categoriesTabs{
     margin-top: 5rem;
- 
+  
    
 }
 @media screen and (max-width: 780px){
     .categoriesTabs{
         margin-top: 10rem;
+     
+       
+    }
+}
+
+@media screen and (min-width: 1490px){
+    .categoriesTabs{
+        margin-top: 8rem;
      
        
     }

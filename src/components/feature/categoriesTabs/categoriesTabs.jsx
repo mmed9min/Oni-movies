@@ -38,7 +38,7 @@ const Tab = styled(TabUnstyled)`
   border: none;
  
   display: flex;
-  width: 100%;
+  width: fit-content;
 
 
   &:hover {
@@ -87,7 +87,7 @@ const CategoriesTabs = () => {
        setValue(newValue);
      };
     return (
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mt-12 md:mt-5 categoriesTabs'>
+        <div className=' mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-12 md:mt-5 categoriesTabs'>
           <div>
 
         
@@ -99,7 +99,7 @@ const CategoriesTabs = () => {
         <Tab>Bollywood</Tab>
       </TabsList>
       <TabPanel value={0}>
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+        <div className='grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3  '>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>
@@ -115,7 +115,7 @@ const CategoriesTabs = () => {
         
       </TabPanel>
       <TabPanel value={1}>
-        <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+        <div className='grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3  '>
          <MovieCard movieImg={movieImg2}/>
          <MovieCard movieImg={movieImg2}/>
          <MovieCard movieImg={movieImg2}/>
@@ -138,7 +138,7 @@ const CategoriesTabs = () => {
         </div>
       </TabPanel>
       <TabPanel value={2}>
-      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+      <div className='grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 '>
         <MovieCard movieImg={movieImg3}/>
         <MovieCard movieImg={movieImg3}/>
         <MovieCard movieImg={movieImg3}/>
@@ -147,7 +147,7 @@ const CategoriesTabs = () => {
         </div>
       </TabPanel>
       <TabPanel value={3}>
-      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-5 '>
+      <div className='grid  grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3  '>
         <MovieCard movieImg={movieImg4}/>
         <MovieCard movieImg={movieImg4}/>
         <MovieCard movieImg={movieImg4}/>

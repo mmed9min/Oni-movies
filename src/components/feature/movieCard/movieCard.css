@@ -3,3 +3,30 @@
     color: #9D9AA2;
 
 }
+.movieCard__img{
+width: 100%;
+}
+.movieCard{
+    position: relative;
+
+}
+.play__btn{
+    background-color: #782CE8 !important;
+    border-radius: 50% !important;
+    width: 40px;
+    height: 40px;
+    padding-left: 2px;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+.cardDetails{
+    position: absolute;
+    top: 0;
+    left: 101%;
+    z-index: 1000;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #413F45;
+}
