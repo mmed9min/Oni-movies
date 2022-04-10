@@ -96,11 +96,11 @@
 }
 .heroImage{
     width: 100%;
-    height: 75vh;
+    height: 80vh;
 }
 .heroImage > img{
     width: 100% !important;
-    height: 75vh !important;
+    height: 80vh !important;
     border-radius: 8px;
 
 }
@@ -186,6 +186,16 @@
         font-weight: 400 !important;
         margin-left: 3px !important;
         min-width: 40px !important;
+    }
+    .heroImage{
+        width: 100%;
+        height: 40vh;
+    }
+    .heroImage > img{
+        width: 100% !important;
+        height: 40vh !important;
+        border-radius: 8px;
+    
     }
 }
 @media screen and (max-width: 520px){

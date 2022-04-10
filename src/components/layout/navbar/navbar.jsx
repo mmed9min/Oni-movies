@@ -16,9 +16,22 @@ import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
 import Autocomplete from '@mui/material/Autocomplete';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-
+import { TextField } from "@material-ui/core";
 import Popover from '@mui/material/Popover';
-const options = ['Option 1', 'Option 2'];
+import SearchCard from "../../feature/searchCard/searchCard";
+import { makeStyles } from "@material-ui/core/styles";
+
+
+
+const options = [
+  {name : "The godFather"},
+  {name : "inception"},
+  {name : "Catch me"}
+];
+
+
+
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -130,29 +143,46 @@ function Navbar() {
             <div className="hidden md:block">
           <div className="ml-4 flex items-center md:ml-6">
           <label>
- 
-      <Autocomplete
-        sx={{
-          display: 'inline-block',
-         
-          '& input': {
-            width: 200,
-          
-          },
-        }}
-        PaperComponent={({ children }) => (
-          <Paper style={{ background: "#413F45" }}>{children}</Paper>
-        )}
-        id="custom-input-demo"
-        options={options}
-        renderInput={(params) => (
-          <div className="nav__search flex justify-between items-center" ref={params.InputProps.ref}>
-              <input placeholder="Search Onion" type="text"  {...params.inputProps} className="nav__search__input"/>
-              <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
-            </div>
+          <Autocomplete
+       sx={{
+        display: 'inline-block',
+        margin : 0,
+        '& input': {
+          width: 400,
+        
+        
+        },
       
-        )}
-      />
+      }}
+      options={options}
+      fullWidth
+      disableCloseOnSelect
+      autoHighlight
+      getOptionLabel={(option) => option.name}
+      renderOption={(props, option) => (
+        <div component="li" className="searchCard"  {...props}>
+          <SearchCard name ={option.name}/>
+        </div>
+      )}
+      renderInput={(params) => (
+        <div className="nav__search flex justify-between items-center p-0 m-0" >
+        <TextField
+        placeholder="Oni Search"
+       
+          {...params}
+          
+          inputProps={{
+            ...params.inputProps,
+          
+          }}
+        />
+        <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
+        </div>
+     
+      )}
+    />
+  
+    
     </label>
             
 
@@ -289,4 +319,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
