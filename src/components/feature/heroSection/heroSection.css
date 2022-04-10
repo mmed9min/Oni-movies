@@ -9,9 +9,15 @@
    left: 0;
 
 }
+.heroCardImage__cont{
+    width: 40%;
+}
 .heroCardImage{
     border-radius: 5px;
     overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .heroImage:before {
@@ -39,10 +45,7 @@
   }
 
 
-.heroCardImage:focus{
-    border: 2px solid #8E51ED;
-    
-}
+
 .heroCards{
     max-width: 50%;
 }
@@ -91,8 +94,15 @@
     border-radius: 8px;
     width: 35%;
 }
-.heroImage > img{
+.heroImage{
     width: 100%;
+    height: 75vh;
+}
+.heroImage > img{
+    width: 100% !important;
+    height: 75vh !important;
+    border-radius: 8px;
+
 }
 
 .copy__btn{
@@ -203,3 +213,8 @@
     }
 }
 
+.tablist{
+    position: absolute;
+    top: 89%;
+    z-index: 100;
+}

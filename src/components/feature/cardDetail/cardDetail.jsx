@@ -1,7 +1,7 @@
 import React from 'react';
 import time from '../../../assets/icons/Frame.svg'
 import star from '../../../assets/icons/star.svg'
-import '../cardDetail/cardDetail.css'
+
 import { Button } from '@material-ui/core';
 import watch from '../../../assets/icons/Vector1.svg'
 import favoris from '../../../assets/icons/Vector2.svg'
@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import '../cardDetail/cardDetail.css'
 
 const BootstrapTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -61,7 +62,7 @@ const CardDetail = () => {
              </p>
          </div>
          <div className="cardDetail__btns w-full mt-3">
-            <Button className='watch__btn watchDetail  mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
+            <Button className=' watchDetail  mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
             {unlike && (
                 <BootstrapTooltip title="Add to watchlist">
             <Button className='like__btn likeDetail ml-2'><img src={favoris} onClick={handleLike}   alt="" /></Button>

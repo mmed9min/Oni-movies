@@ -1,6 +1,10 @@
 import React from 'react';
 import heroImage from '../../../assets/images/hero.png'
 import heroCardImg from '../../../assets/images/heroCard.png'
+import heroCardImg3 from '../../../assets/images/catchMeCard.jpg'
+import heroCardImg1 from '../../../assets/images/matrix.jpg'
+import heroCardImg2 from '../../../assets/images/godfatherCard.jpg'
+
 import star from '../../../assets/icons/star.svg'
 import imdp from '../../../assets/icons/imdp.png'
 import time from '../../../assets/icons/Frame.svg'
@@ -21,110 +25,220 @@ import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 
 
+import TabsUnstyled from '@mui/base/TabsUnstyled';
+import TabsListUnstyled from '@mui/base/TabsListUnstyled';
+import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
+import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
+import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 
 import '../heroSection/heroSection.css'
 import { Button } from '@material-ui/core';
-const BootstrapTooltip = styled(({ className, ...props }) => (
-    <Tooltip {...props} arrow classes={{ popper: className }} />
-  ))(({ theme }) => ({
-    [`& .${tooltipClasses.arrow}`]: {
-      color: theme.palette.common.black,
-    },
-    [`& .${tooltipClasses.tooltip}`]: {
-      backgroundColor: theme.palette.common.black,
-    },
-  }));
+import MovieHeroDetail from '../movieHeroDetail/movieHeroDetail';
+
+import heroImage2 from '../../../assets/images/godfather.jpg'
+import heroImage3 from '../../../assets/images/catchMe.jpg'
+
+
+const blue = {
+  50: '#F0F7FF',
+  100: '#C2E0FF',
+  200: '#80BFFF',
+  300: '#66B2FF',
+  400: '#3399FF',
+  500: '#007FFF',
+  600: '#0072E5',
+  700: '#0059B2',
+  800: '#004C99',
+  900: '#003A75',
+};
+
+const Tab = styled(TabUnstyled)`
+  cursor: pointer;
+  border-radius: 5px;
+
+
+
+
+  &:focus {
+    color: #fff;
+    border-radius: 5px ;
+    outline: none;
+    outline-offset: 2px;
+  }
+
+  &.${tabUnstyledClasses.selected} {
+    border : 2px solid #782CE8;
+    color: #fff;
+  }
+
+  &.${buttonUnstyledClasses.disabled} {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`;
+
+const TabPanel = styled(TabPanelUnstyled)`
+  width : 100%;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 0.875rem;
+  display: flex;
+`;
+
+const TabsList = styled(TabsListUnstyled)` 
+  width:50%;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content : flex-start;
+
+`;
+
 
 const HeroSection = () => {
-    const [unlike, setUnlike] = useState(true);
-const [like, setLike] = useState(false);
 
-const handleLike = () => {
-    setLike(true);
-    setUnlike(false)
-}
-const handleUnlike = ()=>{
-    setLike(false);
-    setUnlike(true)
-}
+const [value, setValue] = React.useState('1');
+
+const handleChange = (event, newValue) => {
+  setValue(newValue);
+};
+
+
     return (
-        <div className='heroSection    mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-5'>
-            <div className='heroImage'>
-               <img  src={heroImage} alt="" />
-            </div>
-            
-            <div className="hero__movie__details ml-3 md:ml-5">
-                <div className="hero__movie__infos flex items-center">
-                    <div className="hero__movie__rating flex mr-2">
-                        <img src={imdp} alt="" className='mr-2  h-5 lg:h-6 2xl:h-10'  />
-                        <img src={star} className="mr-1 w-3 md:w-4 2xl:w-6" alt="" />
-                        <span className='text-white text-xs md:text-md lg:text-lg 2xl:text-2xl font-medium'>6.7</span>
-                    </div>
-                    <div className="hero__movie__type mr-3">
-                        <span className='text-sm hero__type__txt mr-2 2xl:text-xl'>Adventure</span>
-                        <span className='text-sm hero__type__txt 2xl:text-xl'>Sci-fi</span>
-                    </div>
-                    <div className="hero__movie__time flex items-center">
-                        <img src={time} className="w-6 2xl:w-8" alt="" />
-                        <span className='text-white text-sm font-medium ml-1 2xl:text-xl'>1h 31 min</span>
-                    </div>
-                </div>
-                <div className="hero__movie__title md:mt-4 md:mb-4">
-                    <h1 className='text-lg md:text-2xl lg:text-5xl text-white font-medium 2xl:text-7xl'>The Matrix Resurrections</h1>
-                </div>
-                <div className="hero__movie__descrip">
-                    <p className='text-white text-xs md:text-sm   2xl:text-xl'>Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.</p>
-                </div>
-                <div className="hero__movie__btns mt-2 md:mt-5 flex ">
-                    <Button className='watch__btn mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
-                    {unlike && (
-                        <BootstrapTooltip title="Add to watchlist">
-                    <Button className='like__btn ml-2'><img src={favoris} onClick={handleLike}   alt="" /></Button>
-                    </BootstrapTooltip>)}
-                    {like && (<Button className='unLike__btn ml-2'><img src={favorisFill} onClick={handleUnlike}   alt="" /></Button>)}
-                </div>
-            </div>
-            <div className="heroCards__row flex flex-col md:flex-row     justify-between  mt-12 md:mt-0 w-full mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12">
-                <div className="heroCards grid grid-cols-8 gap-2 mb-2 md:mb-0 ml-3 md:ml-5 ">
-                    <button className='clickImg heroCardImage '>
-                      <img src={heroCardImg}className=" " alt="" />
-                    </button>
-                    <button className='clickImg heroCardImage '>
-                      <img src={heroCardImg}className=" " alt="" />
-                    </button>
-                    <button className='clickImg heroCardImage '>
-                      <img src={heroCardImg}className=" " alt="" />
-                    </button>
-                    <button className='clickImg heroCardImage '>
-                      <img src={heroCardImg}className=" " alt="" />
-                    </button>
-                    <button className='clickImg heroCardImage '>
-                      <img src={heroCardImg}className=" " alt="" />
-                    </button>
-                    <button className='clickImg heroCardImage'>
-                      <img src={heroCardImg}className=" " alt="" />
-                    </button>
-                    <button className='clickImg heroCardImage '>
-                      <img src={heroCardImg}className=" " alt="" />
-                    </button>
-                    <button className='clickImg heroCardImage '>
-                      <img src={heroCardImg}className=" " alt="" />
-                    </button>
-                  
-                </div>
-                <div className="hero__social flex items-center justify-between self-end">
-                    <span className='text-white text-sm mr-2'>Share :</span>
-                    <img className='mr-2 w-4 lg:w-5' src={wtsp} alt="" />
-                    <img className='mr-2 w-4 lg:w-5' src={msngr} alt="" />
-                    <img className='mr-2 w-4 lg:w-5' src={pint} alt="" />
-                    <img className='mr-2 w-4 lg:w-5' src={reddit} alt="" />
-                    <img className='mr-2 w-4 lg:w-5' src={fcbk} alt="" />
-                    <img className='mr-2 w-4 lg:w-5' src={twitt} alt="" />
-                    <Button className='flex items-center copy__btn '><img src={copy} alt="" className='mr-2' /><span>Copy link</span></Button>
-                </div>
+        <div className='heroSection  mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-5'>
+    
+   
+            <TabsUnstyled defaultValue={0}>
+              <TabsList className='tablist heroCards grid grid-cols-8 gap-2 mb-2 md:mb-0 ml-3 md:ml-5'>
+  
+                  <Tab className='heroCardImage__cont'>
+                   
+                      <img className="heroCardImage" src={heroCardImg1} alt="" />
+                   
+                  </Tab>
+                  <Tab className='heroCardImage__cont'>
+                   
+                   <img className="heroCardImage" src={heroCardImg2} alt="" />
                 
+               </Tab>
+               <Tab className='heroCardImage__cont'>
+                   
+                   <img className="heroCardImage" src={heroCardImg3} alt="" />
+                
+               </Tab>
+               <Tab className='heroCardImage__cont'>
+                   
+                   <img className="heroCardImage" src={heroCardImg} alt="" />
+                
+               </Tab>
+               <Tab className='heroCardImage__cont'>
+                   
+                   <img className="heroCardImage" src={heroCardImg} alt="" />
+                
+               </Tab>
+               <Tab className='heroCardImage__cont'>
+                   
+                   <img className="heroCardImage" src={heroCardImg} alt="" />
+                
+               </Tab>
+               <Tab className='heroCardImage__cont'>
+                   
+                   <img className="heroCardImage" src={heroCardImg} alt="" />
+                
+               </Tab>
+               <Tab className='heroCardImage__cont'>
+                   
+                   <img className="heroCardImage" src={heroCardImg} alt="" />
+                
+               </Tab>
+           
+      
+                  
+               
+        
+              </TabsList>
+             
+              <TabPanel value={0}>
+                 <MovieHeroDetail
+                  image={heroImage}
+                  title="The Matrix Resurrections "
+                  description = "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+                  duration ="1h 31 min"
+                  rating="6.7"
+                  type={["Adventure", "Sci-fi"]}
+                />
+               </TabPanel>
+               <TabPanel value={1}>
+                <MovieHeroDetail
+                  image={heroImage2}
+                  title="The Godfather"
+                  description = "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+                  duration ="2h 04 min"
+                  rating="8.5"
+                  type={["Action", "Drama"]}
+                />
+               </TabPanel>
+               <TabPanel value={2}>
+                <MovieHeroDetail
+                  image={heroImage3}
+                  title="Catch me if you can"
+                  description = "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+                  duration ="2h 04 min"
+                  rating="8.2"
+                  type={["Action", "Adventure", "Drama"]}
+                />
+               </TabPanel>
+               <TabPanel value={3}>
+                <MovieHeroDetail
+                  image={heroImage}
+                  title="The Godfather"
+                  description = "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+                  duration ="2h 04 min"
+                  rating="8.5"
+                  type={["Action", "Drama"]}
+                />
+               </TabPanel>
+               <TabPanel value={4}>
+                <MovieHeroDetail
+                  image={heroImage}
+                  title="The Godfather"
+                  description = "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+                  duration ="2h 04 min"
+                  rating="8.5"
+                  type={["Action", "Drama"]}
+                />
+               </TabPanel>
+               <TabPanel value={5}>
+                <MovieHeroDetail
+                  image={heroImage}
+                  title="The Godfather"
+                  description = "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+                  duration ="2h 04 min"
+                  rating="8.5"
+                  type={["Action", "Drama"]}
+                />
+               </TabPanel>
+               <TabPanel value={6}>
+                <MovieHeroDetail
+                  image={heroImage}
+                  title="The Godfather"
+                  description = "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+                  duration ="2h 04 min"
+                  rating="8.5"
+                  type={["Action", "Drama"]}
+                />
+               </TabPanel>
+               <TabPanel value={7}>
+                <MovieHeroDetail
+                  image={heroImage}
+                  title="The Godfather"
+                  description = "Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+                  duration ="2h 04 min"
+                  rating="8.5"
+                  type={["Action", "Drama"]}
+                />
+               </TabPanel>
               
-            </div>
+            </TabsUnstyled>
+            
         </div>
     );
 }

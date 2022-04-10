@@ -1,6 +1,13 @@
 .watchDetail{
     width: 75% !important;
     height: 35px !important;
+    background-color: #782CE8 !important;
+    border-radius: 8px 0px 0px 8px !important;
+    color: white !important;
+    font-size: 14px !important;
+    text-transform: unset !important;
+    font-weight: 400 !important;
+ 
 }
 .likeDetail{
     height: 35px !important;
