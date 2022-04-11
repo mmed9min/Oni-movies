@@ -35,6 +35,7 @@ const options = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [focus, setFocus] = useState("");
 
   const [placement, setPlacement] = React.useState();
 
@@ -47,6 +48,12 @@ function Navbar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const handleFocus =()=>{
+  setFocus("inputFocus")
+  }
+  const handleUnfocus =()=>{
+    setFocus("")
+    }
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
@@ -147,35 +154,38 @@ function Navbar() {
        sx={{
         display: 'inline-block',
         margin : 0,
+        padding : 0,
+
         '& input': {
           width: 400,
-        
+       
         
         },
       
       }}
+     
       options={options}
       fullWidth
+      PaperComponent={({ children }) => (
+        <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
+          {children}
+          <Button className="viewSearch__btn">View all</Button>
+        </Paper>
+      )}
       disableCloseOnSelect
       autoHighlight
       getOptionLabel={(option) => option.name}
       renderOption={(props, option) => (
-        <div component="li" className="searchCard"  {...props}>
-          <SearchCard name ={option.name}/>
-        </div>
+        
+          <SearchCard name ={option.name}  {...props}/>
+          
+       
       )}
       renderInput={(params) => (
-        <div className="nav__search flex justify-between items-center p-0 m-0" >
-        <TextField
-        placeholder="Oni Search"
-       
-          {...params}
+        <div className={"nav__search flex justify-between items-center p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
+      
+            <input type="text" placeholder="Search Oni"  {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
           
-          inputProps={{
-            ...params.inputProps,
-          
-          }}
-        />
         <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
         </div>
      

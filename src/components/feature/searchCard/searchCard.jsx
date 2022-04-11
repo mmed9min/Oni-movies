@@ -32,7 +32,7 @@ const SearchCard = (props) => {
                    <span className='gray__txt text-xs'>2h 19min</span>
                    <div className="flex">
                        <span className='text-white text-xs mr-1'>9.1</span>
-                       <img src={star} width="12px" alt="" />
+                       <img src={star} width="10px" alt="" />
                    </div>
                </div>
             </div>
