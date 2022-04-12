@@ -20,6 +20,7 @@ import { TextField } from "@material-ui/core";
 import Popover from '@mui/material/Popover';
 import SearchCard from "../../feature/searchCard/searchCard";
 import { makeStyles } from "@material-ui/core/styles";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -65,11 +66,13 @@ function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
+                <NavLink to="/">
                 <img
                   width="55px"
                   src={logo}
                   alt="Workflow"
                 />
+                </NavLink>
               </div>
               <div className="hidden md:block">
                 <div className="ml-5 lg:ml-10 flex items-baseline space-x-4">

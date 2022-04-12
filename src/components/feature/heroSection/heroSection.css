@@ -20,7 +20,7 @@
     margin: 0;
 }
 
-.heroImage:before {
+.heroImage__shadow:before {
     content: "";
     top: 0;
     left: 0;

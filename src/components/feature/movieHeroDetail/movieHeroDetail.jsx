@@ -29,6 +29,7 @@ import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 
 import '../heroSection/heroSection.css'
 import { Button } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -65,7 +66,7 @@ const [like, setLike] = useState(false);
     }
     return (
         <>
-                <div className='heroImage'>
+                <div className='heroImage heroImage__shadow'>
                   <img  src={props.image} alt="" />
                </div>
                
@@ -93,7 +94,9 @@ const [like, setLike] = useState(false);
                        <p className='text-white text-xs md:text-sm   2xl:text-xl'>{props.description}</p>
                    </div>
                    <div className="hero__movie__btns mt-2 md:mt-5 flex ">
-                       <Button className='watch__btn mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
+                         <NavLink className="watch__btn text-center" to="/watch">
+                         <Button className='watch__btn mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
+                        </NavLink>
                        {unlike && (
                            <BootstrapTooltip title="Add to watchlist">
                        <Button className='like__btn ml-2'><img src={favoris} onClick={handleLike}   alt="" /></Button>

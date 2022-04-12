@@ -1,0 +1,26 @@
+.showDetailsCard{
+    background-color: hsl(260, 5%, 26%);
+    border-radius: 8px;
+}
+.showCard__btn{
+    width: 100%;
+    color: #fff !important;
+    text-transform: unset !important;
+    margin-top: 5px !important;
+    padding: 6px 25px;
+    font-weight: 400 !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+}
+.watchList__btn{
+    background-color: #605D65 !important;
+}
+.trailer__btn{
+    border: 1px solid #605D65 !important;
+}
+.showCard__first{
+    width: 30%;
+}
+.showCard__sec{
+    width: 70%;
+}
