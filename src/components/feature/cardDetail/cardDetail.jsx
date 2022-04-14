@@ -14,6 +14,7 @@ import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import '../cardDetail/cardDetail.css'
 import { NavLink } from 'react-router-dom';
+import { Skeleton } from '@mui/material';
 
 const BootstrapTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -40,7 +41,8 @@ const CardDetail = () => {
     }
     return (
         <>
-        <div className="flex justify-between">
+        <div className='hidden'>
+        <div className=" flex justify-between">
              <span className='text-white text-lg'>The Batman</span>
              <div className="flex items-center">
                  <img className='mr-1' src={star} alt="" />
@@ -73,6 +75,33 @@ const CardDetail = () => {
             </BootstrapTooltip>)}
             {like && (<Button className='unLike__btn likeDetail ml-2'><img src={favorisFill} onClick={handleUnlike}   alt="" /></Button>)}
          </div>
+        </div>
+       
+
+
+
+     <div>
+        <div className="flex justify-between">
+               <Skeleton sx={{ bgcolor: '#605D65' }} variant="text" width={120} height={30} />
+               
+               <Skeleton sx={{ bgcolor: '#605D65' }} variant="text" width={15} />
+         </div>
+         <Skeleton sx={{ bgcolor: '#605D65' }} variant="text" width={120} />
+         <Skeleton sx={{ bgcolor: '#605D65' }} variant="text"  />
+         <Skeleton sx={{ bgcolor: '#605D65' }}   variant="text"  className='card__skeleton' />
+         <div className="cardDetail__btns w-full ">
+         <NavLink className="watch__btn text-center" to="/watch">
+            <Button className=' watchDetail  mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
+        </NavLink>
+        
+            {unlike && (
+                <BootstrapTooltip title="Add to watchlist">
+            <Button className='like__btn likeDetail ml-2'><img src={favoris} onClick={handleLike}   alt="" /></Button>
+            </BootstrapTooltip>)}
+            {like && (<Button className='unLike__btn likeDetail ml-2'><img src={favorisFill} onClick={handleUnlike}   alt="" /></Button>)}
+         </div>
+     </div>
+     
     </>
     );
 }

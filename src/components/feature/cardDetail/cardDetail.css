@@ -14,3 +14,9 @@
     width: 20%;
 
 }
+
+.card__skeleton{
+    height: 150px !important;
+    margin-top: -25px !important;
+    margin-bottom: -10px !important;
+}

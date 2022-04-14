@@ -7,6 +7,9 @@ import likeIcon from '../../../assets/icons/emptyHeart.svg'
 import unLikeIcon from '../../../assets/icons/fillHeart.svg'
 import '../searchCard/searchCard.css'
 import { NavLink } from 'react-router-dom';
+import Skeleton from '@mui/material/Skeleton';
+
+
 const SearchCard = (props) => {
     const [unlike, setUnlike] = useState(true);
     const [like, setLike] = useState(false);
@@ -24,7 +27,7 @@ const SearchCard = (props) => {
     return (
         <>
    
-          <div className='searchCard flex justify-between py-1'>
+          <div className='hidden searchCard flex justify-between py-1'>
           <NavLink  to="/watch">
             <div className='flex'>
                <img src={heroCarImage} className="mr-2 rounded-md" width="55px" height="90px" alt="" />
@@ -43,6 +46,31 @@ const SearchCard = (props) => {
             <div>
               {unlike && (<img onClick={handleLike} src={likeIcon} width="12px" alt="" />)}
               {like && (<img onClick={handleUnlike} src={unLikeIcon} width="12px" alt="" />)}
+            </div>
+              
+           </div>
+
+
+
+           <div className='searchCard flex justify-between '>
+       
+            <div className='flex'>
+               <Skeleton sx={{ bgcolor: '#605D65' }} className="mr-2 rounded-lg"  variant="rectangular" width={100} height={94} />
+
+        
+          
+               <div className="searchCard__details grid content-between">
+                   <Skeleton sx={{ bgcolor: '#605D65' }} variant="text" width={120} />
+                   <Skeleton sx={{ bgcolor: '#605D65' }} variant="text" width={40}/>
+                   <Skeleton sx={{ bgcolor: '#605D65' }} variant="text"  width={60}/>
+                   <Skeleton sx={{ bgcolor: '#605D65' }} variant="text"  width={40}/>
+
+               </div>
+            </div>
+        
+            <div>
+            <Skeleton sx={{ bgcolor: '#605D65' }} variant="text"  width={15}/>
+ 
             </div>
               
            </div>
