@@ -10,7 +10,7 @@ const SimilairCard = () => {
     return (
         <div className='mt-5'>
             <span className='text-white text-2xl font-bold'>Similar titles :</span>
-            <div className="grid grid-cols-4 gap-2 mt-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">
               <MovieCard movieImg={movieImg1}/>
               <MovieCard movieImg={movieImg2}/>
               <MovieCard movieImg={movieImg3}/>

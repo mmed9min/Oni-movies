@@ -65,32 +65,33 @@ const [like, setLike] = useState(false);
         setUnlike(true)
     }
     return (
-        <>
-                <div className='heroImage heroImage__shadow'>
-                  <img  src={props.image} alt="" />
+        <div>
+                <div className='heroImage heroImage__shadow relative'>
+                  <img className='' src={props.image} alt="" />
                </div>
                
                <div className="hero__movie__details ml-3 md:ml-5">
-                   <div className="hero__movie__infos flex items-center">
-                       <div className="hero__movie__rating flex mr-2">
-                           <img src={imdp} alt="" className='mr-2  h-5 lg:h-6 2xl:h-10'  />
-                           <img src={star} className="mr-1 w-3 md:w-4 2xl:w-6" alt="" />
-                           <span className='text-white text-xs md:text-md lg:text-lg 2xl:text-2xl font-medium'>{props.rating}</span>
+                   <div className="hero__movie__infos flex flex-col md:flex-row md:items-center">
+                      
+                       <div className="hero__movie__rating flex mr-2 mb-1 md:mb-0 items-center">
+                           <img src={imdp} alt="" className='mr-2  h-5 md:h-6 2xl:h-10'  />
+                           <img src={star} className="mr-1 w-4 md:w-4 2xl:w-6" alt="" />
+                           <span className='text-white text-xs md:text-md md:text-lg 2xl:text-2xl font-medium '>{props.rating}</span>
                        </div>
-                       <div className="hero__movie__type mr-3">
-                           {props.type.map((type)=> <span className='text-sm hero__type__txt mr-2 2xl:text-xl'>{type}</span>)}
+                       <div className="hero__movie__type mr-3 mb-1 md:mb-0">
+                           {props.type.map((type)=> <span className='text-sm hero__type__txt mr-2 2xl:text-xl '>{type}</span>)}
                            
 
                        </div>
-                       <div className="hero__movie__time flex items-center">
-                           <img src={time} className="w-6 2xl:w-8" alt="" />
+                       <div className="hero__movie__time flex items-center mb-1 md:mb-0">
+                           <img src={time} className="w-4 md:w-6 2xl:w-8" alt="" />
                            <span className='text-white text-sm font-medium ml-1 2xl:text-xl'>{props.duration}</span>
                        </div>
                    </div>
-                   <div className="hero__movie__title md:mt-4 md:mb-4">
-                       <h1 className='text-lg md:text-2xl lg:text-5xl text-white font-bold 2xl:text-7xl'>{props.title}</h1>
+                   <div className="hero__movie__title md:mt-4 mb-1  md:mb-4 ">
+                       <h1 className='text-lg md:text-2xl md:text-5xl text-white font-bold 2xl:text-7xl'>{props.title}</h1>
                    </div>
-                   <div className="hero__movie__descrip">
+                   <div className="hero__movie__descrip hidden md:block">
                        <p className='text-white text-xs md:text-sm   2xl:text-xl'>{props.description}</p>
                    </div>
                    <div className="hero__movie__btns mt-2 md:mt-5 flex ">
@@ -104,7 +105,7 @@ const [like, setLike] = useState(false);
                        {like && (<Button className='unLike__btn ml-2'><img src={favorisFill} onClick={handleUnlike}   alt="" /></Button>)}
                    </div>
                </div> 
-        </>
+        </div>
     );
 }
 

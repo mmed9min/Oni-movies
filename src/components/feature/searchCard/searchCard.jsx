@@ -6,6 +6,7 @@ import { Button } from '@mui/material';
 import likeIcon from '../../../assets/icons/emptyHeart.svg'
 import unLikeIcon from '../../../assets/icons/fillHeart.svg'
 import '../searchCard/searchCard.css'
+import { NavLink } from 'react-router-dom';
 const SearchCard = (props) => {
     const [unlike, setUnlike] = useState(true);
     const [like, setLike] = useState(false);
@@ -21,8 +22,10 @@ const SearchCard = (props) => {
             setUnlike(true)
         }
     return (
-        
+        <>
+   
           <div className='searchCard flex justify-between py-1'>
+          <NavLink  to="/watch">
             <div className='flex'>
                <img src={heroCarImage} className="mr-2 rounded-md" width="55px" height="90px" alt="" />
           
@@ -36,12 +39,15 @@ const SearchCard = (props) => {
                    </div>
                </div>
             </div>
+            </NavLink>
             <div>
               {unlike && (<img onClick={handleLike} src={likeIcon} width="12px" alt="" />)}
               {like && (<img onClick={handleUnlike} src={unLikeIcon} width="12px" alt="" />)}
             </div>
               
            </div>
+       
+        </>
       
     );
 }

@@ -92,8 +92,8 @@ const MovieCategories = (props) => {
 
         
              <TabsUnstyled defaultValue={0}>
-                 <div className='flex'>
-                   <span className='text-white font-bold text-lg mr-5'>{props.type}</span>
+                 <div className='flex flex-col md:flex-row'>
+                   <span className='text-white font-bold text-lg mr-5 mb-2 md:mb-0'>{props.type}</span>
                     <TabsList>
                      <Tab>Latest</Tab>
                      <Tab>Trending</Tab>

@@ -9,19 +9,40 @@ import imdp from '../../../assets/icons/imdp.png'
 import star from '../../../assets/icons/star.svg'
 import clock from '../../../assets/icons/Frame.svg'
 
-
+import { useState } from 'react';
 
 
 const ShowDetailsCard = () => {
+    
+    const [unlike, setUnlike] = useState(true);
+const [like, setLike] = useState(false);
+
+
+
+    const handleLike = () => {
+        setLike(true);
+        setUnlike(false)
+    }
+    const handleUnlike = ()=>{
+        setLike(false);
+        setUnlike(true)
+    }
     return (
-        <div className='flex showDetailsCard p-3'>
-            <div className='flex flex-col items-start showCard__first'>
+        <div className='flex  showDetailsCard p-3 flex-col  xs:flex-row items-center xs:items-start'>
+            <div className='flex flex-col justify-center  xs:justify-start xs:items-start showCard__first mb-3'>
                <img src={heroCardImg} className="flex w-full" alt="" />
-               
-               <Button className='showCard__btn watchList__btn'>
-                   <img src={favoris} width="15px" className="mr-2" alt="" />
+               {unlike && (
+               <Button className='showCard__btn watchList__btn' onClick={handleLike}>
+              <img src={favoris} width="15px" className="mr-2" alt="" />
+            
                    Add to watchlist
-                   </Button>
+                </Button>)}
+                {like && (
+               <Button className='showCard__btn watchList__btn' onClick={handleUnlike}>
+              <img src={favorisFill} width="15px" className="mr-2" alt="" />
+            
+                   Add to watchlist
+                </Button>)}
                <Button className='showCard__btn trailer__btn'>
                    <img src={camera} width="15px"  className="mr-2" alt="" />
                    Watch trailer

@@ -15,6 +15,8 @@ import '../watchSection/watchSection.css'
 import report from '../../../assets/icons/report.svg'
 import watch from '../../../assets/icons/Vector1.svg'
 import { Button } from '@mui/material';
+import ServerCard from '../serverCard/serverCard';
+import ItemsCarousel from '../ItemsCarousel/itemsCarousel';
 const WatchSection = () => {
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     return (
@@ -41,38 +43,26 @@ const WatchSection = () => {
             </div>
             <div className="servers__section mt-3">
                 <span className='gray__txt text-xs'>Select Server: </span>
-                <div className="flex flex-col lg:flex-row justify-between mt-1">
-                    <div className="grid grid-cols-12 gap-2 servers">
-                        <div className="serverCard flex justify-between items-center">
-                            <img src={watch} width="15px" alt="" />
-                            <span className='text-white text-xs'>Vidstream</span>
-                        </div>¨
-                        <div className="serverCard flex justify-between items-center">
-                            <img src={watch} width="15px" alt="" />
-                            <span className='text-white text-xs'>MyCloud</span>
-                        </div>¨
-                        <div className="serverCard flex justify-between items-center">
-                            <img src={watch} width="15px" alt="" />
-                            <span className='text-white text-xs'>VideoVard</span>
-                        </div>¨
-                        <div className="serverCard flex justify-between items-center">
-                            <img src={watch} width="15px" alt="" />
-                            <span className='text-white text-xs'>StreamTape</span>
-                        </div>¨
-                        <div className="serverCard flex justify-between items-center">
-                            <img src={watch} width="15px" alt="" />
-                            <span className='text-white text-xs'>Doodstream</span>
-                        </div>¨
-                        
+             
+                <div className="flex flex-col lg:flex-row justify-between sm:items-center mt-1">
+                    <div className="hidden sm:grid grid-cols-5 lg:grid-cols-5 gap-2 servers w-70 h-10">
+                        <ServerCard serverName="Vidstream"/>
+                        <ServerCard serverName="MyCloud"/>
+                        <ServerCard serverName="VideoVard"/>
+                        <ServerCard serverName="StreamTape"/>
+                        <ServerCard serverName="Doodstream"/>
                     </div>
-                    <div className="hero__socialMedia flex items-center justify-between w-80 lg:w-full self-end">
+                    <div className="block sm:hidden">
+                        <ItemsCarousel servers/>
+                    </div>
+                    <div className="hero__social flex items-center justify-between mt-5 lg:mt-0">
                        <span className='text-white text-sm mr-2 whitespace-nowrap'>Share :</span>
-                       <img className='mr-2 w-4 lg:w-5' src={wtsp} alt="" />
-                       <img className='mr-2 w-4 lg:w-5' src={msngr} alt="" />
-                       <img className='mr-2 w-4 lg:w-5' src={pint} alt="" />
-                       <img className='mr-2 w-4 lg:w-5' src={reddit} alt="" />
-                       <img className='mr-2 w-4 lg:w-5' src={fcbk} alt="" />
-                       <img className='mr-2 w-4 lg:w-5' src={twitt} alt="" />
+                       <img className='mr-2 w-5' src={wtsp} alt="" />
+                       <img className='mr-2 w-5' src={msngr} alt="" />
+                       <img className='mr-2 w-5' src={pint} alt="" />
+                       <img className='mr-2 w-5' src={reddit} alt="" />
+                       <img className='mr-2 w-5' src={fcbk} alt="" />
+                       <img className='mr-2 w-5' src={twitt} alt="" />
                     <Button className='flex items-center copy__btn '><img src={copy} alt="" className='mr-2' /><span>Copy link</span></Button>
                     </div>
                 </div>

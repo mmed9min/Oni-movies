@@ -87,7 +87,7 @@ const CategoriesTabs = () => {
        setValue(newValue);
      };
     return (
-        <div className=' mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-12 md:mt-5 categoriesTabs'>
+        <div className=' mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12  md:mt-5 categoriesTabs'>
           <div>
 
         

@@ -13,6 +13,7 @@ import { styled } from '@mui/material/styles';
 
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import '../cardDetail/cardDetail.css'
+import { NavLink } from 'react-router-dom';
 
 const BootstrapTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -62,7 +63,10 @@ const CardDetail = () => {
              </p>
          </div>
          <div className="cardDetail__btns w-full mt-3">
+         <NavLink className="watch__btn text-center" to="/watch">
             <Button className=' watchDetail  mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
+        </NavLink>
+        
             {unlike && (
                 <BootstrapTooltip title="Add to watchlist">
             <Button className='like__btn likeDetail ml-2'><img src={favoris} onClick={handleLike}   alt="" /></Button>

@@ -24,3 +24,21 @@
 .showCard__sec{
     width: 70%;
 }
+
+@media screen and (max-width: 528px){
+    .showCard__btn{
+        font-size: 11px !important;
+    }
+  
+}
+@media screen and (max-width: 480px){
+    .showCard__first{
+        width: 100%;
+    }
+    .showCard__sec{
+        width: 100%;
+    }
+    .showCard__btn{
+        font-size: 14px !important;
+    }
+}

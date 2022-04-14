@@ -151,7 +151,7 @@ function Navbar() {
               </div>
             </div>
             <div className="hidden md:block">
-          <div className="ml-4 flex items-center md:ml-6">
+          <div className="nav__right ml-4 flex items-center md:ml-6">
           <label>
           <Autocomplete
        sx={{
@@ -160,7 +160,7 @@ function Navbar() {
         padding : 0,
 
         '& input': {
-          width: 400,
+       
        
         
         },
@@ -303,10 +303,51 @@ function Navbar() {
                
               </div>
               <div className="ml-4  md:ml-6">
-            <div className="nav__search flex justify-between items-center mb-3">
-              <input placeholder="Search Onion" type="text" className="nav__search__input"/>
-              <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
-            </div>
+              <label>
+          <Autocomplete
+       sx={{
+        display: 'inline-block',
+        margin : 0,
+        padding : 0,
+
+        '& input': {
+       
+       
+        
+        },
+      
+      }}
+     
+      options={options}
+      fullWidth
+      PaperComponent={({ children }) => (
+        <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
+          {children}
+          <Button className="viewSearch__btn">View all</Button>
+        </Paper>
+      )}
+      disableCloseOnSelect
+      autoHighlight
+      getOptionLabel={(option) => option.name}
+      renderOption={(props, option) => (
+        
+          <SearchCard name ={option.name}  {...props}/>
+          
+       
+      )}
+      renderInput={(params) => (
+        <div className={"nav__search flex justify-between items-center p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
+      
+            <input type="text" placeholder="Search Oni"  {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
+          
+        <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
+        </div>
+     
+      )}
+    />
+  
+    
+    </label>
 
          
            <div className="flex justify-center mt-6 relative ">

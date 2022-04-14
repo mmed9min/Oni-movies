@@ -10,19 +10,16 @@
 .serverCard{
     border: 1px solid #605D65;
     border-radius: 8px;
-    width: 130px;
+    width: 95%;
     padding: 11px 20px 11px 15px;
     cursor: pointer;
 }
 .serverCard:hover{
     background-color: #413F45 !important;
 }
-.hero__socialMedia{
+.hero__social{
     border: 1px solid #605D65;
     padding: 3px 8px !important;
     border-radius: 8px;
-    width: 40%;
-}
-.servers{
-    width: 100% !important;
+    width: auto;
 }

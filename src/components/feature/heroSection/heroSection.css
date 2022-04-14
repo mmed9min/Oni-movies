@@ -71,7 +71,7 @@
     font-size: 14px !important;
     text-transform: unset !important;
     font-weight: 400 !important;
-    width: 8% !important;
+    width: 120px;
 }
 .like__btn{
     background-color: #605D65 !important;
@@ -92,14 +92,14 @@
     border: 1px solid #605D65;
     padding: 5px 8px;
     border-radius: 8px;
-    width: 35%;
+    width: 100%;
 }
 .heroImage{
     width: 100%;
     height: 80vh;
 }
 .heroImage > img{
-    width: 100% !important;
+    width: 100vw !important;
     height: 80vh !important;
     border-radius: 8px;
 
@@ -117,25 +117,17 @@
 @media screen and (max-width: 990px){
     .heroCards__row{
       
-        top: 92%;
+        top: 94%;
   
     }
-    .hero__movie__details{
-        position: absolute;
-        top: 25%;
-    }
+
     .hero__social{
         border: 1px solid #605D65;
         padding: 5px 8px;
         border-radius: 8px;
       width: 43%;
     }
-    .hero__movie__descrip > p{
-        max-height: 40px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-    }
+  
     .watch__btn{
         background-color: #782CE8 !important;
         border-radius: 8px 0px 0px 8px !important;
@@ -167,18 +159,15 @@
     .heroCards{
         max-width: 75%;
     }
-    .hero__movie__details{
-        position: absolute;
-        top: 15%;
-    }
+ 
     .watch__btn{
         background-color: #782CE8 !important;
         border-radius: 8px 0px 0px 8px !important;
         color: white !important;
-        font-size: 11px !important;
+        font-size: 14px !important;
         text-transform: unset !important;
         font-weight: 400 !important;
-        width: 20% !important;
+        width: 100px !important;
     }
     .like__btn{
         background-color: #605D65 !important;
@@ -193,14 +182,29 @@
     }
     .heroImage > img{
         width: 100% !important;
-        height: 40vh !important;
+        height: 39vh !important;
         border-radius: 8px;
     
     }
 }
 @media screen and (max-width: 520px){
     .hero__social{
-        width: 90%; 
+        width: 100%; 
+    }
+    .heroImage > img{
+        width: 100% !important;
+        height: 37vh !important;
+        border-radius: 8px;
+    
+    }
+    .watch__btn{
+        background-color: #782CE8 !important;
+        border-radius: 8px 0px 0px 8px !important;
+        color: white !important;
+        font-size: 15px !important;
+        text-transform: unset !important;
+        font-weight: 400 !important;
+        width: 110px !important;
     }
 }
 @media screen and (min-width: 1490px){

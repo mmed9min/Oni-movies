@@ -37,6 +37,7 @@ import MovieHeroDetail from '../movieHeroDetail/movieHeroDetail';
 
 import heroImage2 from '../../../assets/images/godfather.jpg'
 import heroImage3 from '../../../assets/images/catchMe.jpg'
+import Slideshow from '../mobileSlideShow/mobileSlideShow';
 
 
 const blue = {
@@ -103,10 +104,10 @@ const handleChange = (event, newValue) => {
 
 
     return (
-        <div className='heroSection  mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-5'>
+        <div className='heroSection   mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-5'>
     
    
-            <TabsUnstyled defaultValue={0}>
+            <TabsUnstyled className='hidden md:block' defaultValue={0}>
               <TabsList className='tablist heroCards grid grid-cols-8 gap-2 mb-2 md:mb-0 ml-3 md:ml-5'>
   
                   <Tab className='heroCardImage__cont'>
@@ -238,7 +239,20 @@ const handleChange = (event, newValue) => {
                </TabPanel>
               
             </TabsUnstyled>
-            
+            <div className='block md:hidden'>
+              <Slideshow />
+              <div className="hero__social flex items-center justify-between w-full mt-5">
+                       <span className='text-white text-sm mr-2 whitespace-nowrap'>Share :</span>
+                       <img className='mr-2 w-5 lg:w-5' src={wtsp} alt="" />
+                       <img className='mr-2 w-5 lg:w-5' src={msngr} alt="" />
+                       <img className='mr-2 w-5 lg:w-5' src={pint} alt="" />
+                       <img className='mr-2 w-5 lg:w-5' src={reddit} alt="" />
+                       <img className='mr-2 w-5 lg:w-5' src={fcbk} alt="" />
+                       <img className='mr-2 w-5 lg:w-5' src={twitt} alt="" />
+                    <Button className='flex items-center copy__btn '><img src={copy} alt="" className='mr-2' /><span>Copy link</span></Button>
+              </div>
+            </div>
+          
         </div>
     );
 }
