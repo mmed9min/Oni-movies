@@ -52,3 +52,27 @@
     
     }
 }
+
+.searchMobile__icon{
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #9D9AA2 !important;
+}
+.searchMobile__btn{
+    border-radius: 50% !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    margin-right: 10px;
+}
+
+.search__mobile{
+    position: absolute;
+    top: 90%;
+    right: 0%;
+    left: 4%;
+    z-index: 1000;
+}
+.genre{
+    height: fit-content !important;
+}

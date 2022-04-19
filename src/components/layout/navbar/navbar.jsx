@@ -10,7 +10,6 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
@@ -21,8 +20,54 @@ import Popover from '@mui/material/Popover';
 import SearchCard from "../../feature/searchCard/searchCard";
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
+import Collapse from '@mui/material/Collapse';
+import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material/styles';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 
+const Accordion = styled((props) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+background : "unset",
+padding : 0,
+  '&:not(:last-child)': {
+    borderBottom: 0,
+    padding : 0,
+  },
+  '&:before': {
+    display: 'none',
+    padding : 0,
+  },
+}));
 
+const AccordionSummary = styled((props) => (
+  <MuiAccordionSummary
+ 
+    {...props}
+  />
+))(({ theme }) => ({
+  backgroundColor:"unset",
+  flexDirection: 'row-reverse',
+  padding : 0,
+  margin : 0,
+  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+    transform: 'rotate(90deg)',
+  },
+  '& .MuiAccordionSummary-content': {
+    marginLeft: 0,
+    margin : 0,
+  },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  paddingTop : 0,
+  paddingBottom: 0,
+  border: "none",
+}));
 
 const options = [
   {name : "The godFather"},
@@ -40,7 +85,17 @@ function Navbar() {
 
   const [placement, setPlacement] = React.useState();
 
+  const [checked, setChecked] = React.useState(false);
 
+  const [expanded, setExpanded] = React.useState('panel1');
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
+  const handleSearchMobile = () => {
+    setChecked((prev) => !prev);
+  };
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -62,7 +117,7 @@ function Navbar() {
   return (
     <div>
       <nav >
-        <div className=" mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12">
+        <div className="relative mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
@@ -76,6 +131,12 @@ function Navbar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-5 lg:ml-10 flex items-baseline space-x-4">
+                <a
+                    href="#"
+                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm font-medium"
+                  >
+                    Channels
+                  </a>
                   <a
                     href="#"
                     className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm font-medium"
@@ -214,6 +275,9 @@ function Navbar() {
           </div>
         </div>
             <div className="-mr-2 flex md:hidden">
+              <Button className="searchMobile__btn" onClick={handleSearchMobile}>
+                <FontAwesomeIcon className="searchMobile__icon" size="xl" icon={faSearch}/>
+              </Button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -256,6 +320,46 @@ function Navbar() {
                   </svg>
                 )}
               </button>
+              <Collapse in={checked} >
+              <label className="search__mobile">
+               <Autocomplete
+                     sx={{
+                      display: 'inline-block',
+                      margin : 0,
+                      padding : 0,
+                    }}
+                    options={options}
+                    fullWidth
+                    PaperComponent={({ children }) => (
+                      <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
+                        {children}
+                        <Button className="viewSearch__btn">View all</Button>
+                      </Paper>
+                    )}
+                    disableCloseOnSelect
+                    autoHighlight
+                    getOptionLabel={(option) => option.name}
+                    renderOption={(props, option) => (
+                      
+                        <SearchCard name ={option.name}  {...props}/>
+                        
+                     
+                    )}
+                    renderInput={(params) => (
+                      <div className={"nav__search flex justify-between items-center h-11 p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
+                    
+                          <input type="text" placeholder="Search Oni"  {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
+                        
+                
+                      </div>
+                   
+                    )}
+                />
+  
+    
+                 </label>
+              </Collapse>
+              
             </div>
           </div>
         </div>
@@ -272,82 +376,85 @@ function Navbar() {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <a
+                  href="#"
+                  className="text-gray-300  hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Channels
+                </a>
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300  hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Anime
                 </a>
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300  hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Bollywood
                 </a>
+                <Accordion expanded={expanded === 'panel1'} className="genre" onChange={handleChange('panel1')}>
+                  <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                  
+                    <a
+                      href="#"
+                      className="text-gray-300  hover:text-white block px-3  py-2 rounded-md text-base font-medium"
+                    >
+                      Genre
+                      <FontAwesomeIcon icon={faChevronDown} className="ml-1" width="10px"/>
+                    </a>
+                
+                  </AccordionSummary>
+                  <AccordionDetails>
+                  <Typography sx={{ bgcolor: '#413F45',overflow : "hidden",borderRadius: "8px" }}>
+                          <div className="grid grid-cols-3 gap-x-6 gap-y-2 px-5 py-3 ">
+                              <span className="genre__txt"><a href="http://">Adventure</a></span> 
+                              <span className="genre__txt"><a href="http://">Mystery</a></span> 
+                              <span className="genre__txt"><a href="http://">Drama</a></span> 
+                              <span className="genre__txt"><a href="http://">Sci-fi</a></span> 
+                              <span className="genre__txt"><a href="http://">Drama</a></span> 
+                              <span className="genre__txt"><a href="http://">Romance</a></span> 
+                              <span className="genre__txt"><a href="http://">Music</a></span> 
+                              <span className="genre__txt"><a href="http://">Documentry</a></span> 
+                              <span className="genre__txt"><a href="http://">Adventure</a></span> 
+                              <span className="genre__txt"><a href="http://">Sci-fi</a></span> 
+                              <span className="genre__txt"><a href="http://">Drama</a></span> 
+                              <span className="genre__txt"><a href="http://">Sci-fi</a></span> 
+                              <span className="genre__txt"><a href="http://">Drama</a></span> 
+                              <span className="genre__txt"><a href="http://">Romance</a></span> 
+                              <span className="genre__txt"><a href="http://">Adventure</a></span> 
+                            </div>
+                      </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Genre
-                </a>
+               
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Imdp
-                </a>
+                <Accordion expanded={expanded === 'panel2'} className="genre" onChange={handleChange('panel2')}>
+                  <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                  
+                    <a
+                      href="#"
+                      className="text-gray-300  hover:text-white block px-3  py-2 rounded-md text-base font-medium"
+                    >
+                      Imdp
+                      <FontAwesomeIcon icon={faChevronDown} className="ml-1" width="10px"/>
+                    </a>
+                
+                  </AccordionSummary>
+                  <AccordionDetails>
+                  <Typography>
+                         <span className="text-white">Imdp</span>
+                      </Typography>
+                  </AccordionDetails>
+                </Accordion>
 
                
               </div>
               <div className="ml-4  md:ml-6">
-              <label>
-          <Autocomplete
-       sx={{
-        display: 'inline-block',
-        margin : 0,
-        padding : 0,
-
-        '& input': {
-       
-       
-        
-        },
-      
-      }}
-     
-      options={options}
-      fullWidth
-      PaperComponent={({ children }) => (
-        <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
-          {children}
-          <Button className="viewSearch__btn">View all</Button>
-        </Paper>
-      )}
-      disableCloseOnSelect
-      autoHighlight
-      getOptionLabel={(option) => option.name}
-      renderOption={(props, option) => (
-        
-          <SearchCard name ={option.name}  {...props}/>
-          
-       
-      )}
-      renderInput={(params) => (
-        <div className={"nav__search flex justify-between items-center p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
-      
-            <input type="text" placeholder="Search Oni"  {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
-          
-        <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
-        </div>
-     
-      )}
-    />
-  
-    
-    </label>
+            
 
          
            <div className="flex justify-center mt-6 relative ">
