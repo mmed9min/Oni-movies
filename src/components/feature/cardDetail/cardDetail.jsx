@@ -64,7 +64,7 @@ const CardDetail = () => {
              When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.
              </p>
          </div>
-         <div className="cardDetail__btns w-full mt-3">
+         <div className="cardDetail__btns flex items-center w-full mt-3">
          <NavLink className="watch__btn text-center" to="/watch">
             <Button className=' watchDetail  mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
         </NavLink>
@@ -89,7 +89,7 @@ const CardDetail = () => {
          <Skeleton sx={{ bgcolor: '#605D65' }} variant="text" width={120} />
          <Skeleton sx={{ bgcolor: '#605D65' }} variant="text"  />
          <Skeleton sx={{ bgcolor: '#605D65' }}   variant="text"  className='card__skeleton' />
-         <div className="cardDetail__btns w-full ">
+         <div className="cardDetail__btns  flex items-center ">
          <NavLink className="watch__btn text-center" to="/watch">
             <Button className=' watchDetail  mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
         </NavLink>

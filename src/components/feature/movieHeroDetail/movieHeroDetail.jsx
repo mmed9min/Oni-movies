@@ -80,8 +80,6 @@ const [like, setLike] = useState(false);
                        </div>
                        <div className="hero__movie__type mr-3 mb-1 md:mb-0">
                            {props.type.map((type)=> <span className='text-sm hero__type__txt mr-2 2xl:text-xl '>{type}</span>)}
-                           
-
                        </div>
                        <div className="hero__movie__time flex items-center mb-1 md:mb-0">
                            <img src={time} className="w-4 md:w-6 2xl:w-8" alt="" />

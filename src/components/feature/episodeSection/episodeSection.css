@@ -1,0 +1,16 @@
+.seasonBtn{
+    background-color: #413F45 !important;
+    text-transform: none !important;
+    border-radius: 8px !important;
+    height: 30px !important;
+    font-size: 12px;
+}
+
+.seasonMenu{
+    background-color: #413F45;
+}
+
+.eps{
+    width: 100% !important;
+}
+

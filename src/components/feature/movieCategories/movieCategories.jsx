@@ -26,7 +26,7 @@ const blue = {
 };
 
 const Tab = styled(TabUnstyled)`
-  font-family: IBM Plex Sans, sans-serif;
+  font-family: manrope, sans-serif;
   color: #fff;
   cursor: pointer;
   font-size: 12px;
@@ -34,7 +34,7 @@ const Tab = styled(TabUnstyled)`
   background-color: #413F45;
 
   padding: 5px 10px;
- margin-right: 7px;
+  margin-right: 7px;
  
   border-radius : 8px;
   display: flex;

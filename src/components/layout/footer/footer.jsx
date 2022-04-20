@@ -12,50 +12,50 @@ const Footer = () => {
                 <p className='footer__txt text-white text-sm lg:w-1/2 2xl:text-lg'>Oni provides more than 50,000 titles more than any sites active today. 
                  Our main focus is making your viewing experience better and bringing the best of entertainment industry has to offer.
                  </p>
+                 <p className='md:hidden footer__txt text-xs  text-white 2xl:text-sm mt-4'>
+                 Note : This site does not store any files on our server, we are only linked to the 3rd party services which provide them.
+                 </p>
                  <div className="footer__menu mt-5">
                
-                <div className=" lg:ml-10 flex items-baseline space-x-1 md:space-x-4">
-                  <a
-                    href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-xs sm:text-sm font-medium 2xl:text-lg"
-                  >
-                  Contact
-                  </a>
+                <div className=" lg:ml-10 flex justify-center md:justify-start items-baseline space-x-4">
+            
 
                   <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-xs sm:text-sm font-medium 2xl:text-lg"
+                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm font-medium 2xl:text-lg"
                   >
-                    Channel
+                    Channels
                   </a>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-white px-1 py-2 rounded-md text-xs sm:text-sm font-medium 2xl:text-lg"
+                    className="text-gray-300 hover:text-white px-1 py-2 rounded-md text-sm font-medium 2xl:text-lg"
                   >
                     Movies
                   </a>
                   <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-xs sm:text-sm font-medium 2xl:text-lg"
+                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm font-medium 2xl:text-lg"
                   >
                    Anime
                   </a>
                   <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-xs sm:text-sm font-medium 2xl:text-lg"
+                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm font-medium 2xl:text-lg"
                   >
                     Bollywood
                   </a>
-                 
+                  <div className='hidden md:block'>
                   <Button className='donate__btn'>Donate</Button>
+                  </div>
+                  
                    </div>
                  </div>
             </div>
             <div className="footer__content flex  md:justify-between mt-10 flex-col md:flex-row">
-                <p className='footer__txt text-sm gray__txt md:w-1/2 mr-2 md:self-end mb-1 md:mb-0 2xl:text-lg'>
+                <p className='self-center footer__txt text-sm gray__txt md:w-1/2 mr-2 md:self-end mb-1 md:mb-0 2xl:text-lg'>
                    2022 Copyright © Oni. All Rights Reserved
                  </p>
-                 <p className='footer__txt text-xs  text-white 2xl:text-sm'>
+                 <p className='hidden md:block footer__txt text-xs  text-white 2xl:text-sm'>
                  Note : This site does not store any files on our server, we are only linked to the 3rd party services which provide them.
                  </p>
             </div>

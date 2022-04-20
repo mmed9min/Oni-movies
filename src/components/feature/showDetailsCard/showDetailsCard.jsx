@@ -28,8 +28,8 @@ const [like, setLike] = useState(false);
         setUnlike(true)
     }
     return (
-        <div className='flex  showDetailsCard p-3 flex-col  xs:flex-row items-center xs:items-start'>
-            <div className='flex flex-col justify-center  xs:justify-start xs:items-start showCard__first mb-3'>
+        <div className='flex  showDetailsCard p-1 py-2 xs:p-3 flex-col  xs:flex-row items-center xs:items-start'>
+            <div className='flex flex-col justify-center  xs:justify-start xs:items-start showCard__first mb-3 hidden xs:block'>
                <img src={heroCardImg} className="flex w-full" alt="" />
                {unlike && (
                <Button className='showCard__btn watchList__btn' onClick={handleLike}>
@@ -72,17 +72,17 @@ const [like, setLike] = useState(false);
                     <span className='text-white text-xs mr-2 2xl:text-sm'>Adventure</span>
                     <span className='text-white text-xs mr-2 2xl:text-sm'>Adventure</span>
                 </div>
-                <div className="director mt-1">
+                <div className="director mt-1 flex">
                     <span className='gray__txt text-xs mr-1 font-bold 2xl:text-sm'>Director:</span>
                     <span className='text-white text-xs 2xl:text-sm'>Lana Wachowski</span>
                 </div>
-                <div className="director mt-1">
+                <div className="director mt-1 flex">
                     <span className='gray__txt text-xs mr-1 font-bold 2xl:text-sm'>Cast:</span>
                     <span className='text-white text-xs 2xl:text-sm '>
                     Keanu Reeves, Laurance Fishburn,Jessica Henwick, Carrie-anne Moss, Priyanka Chopra, Christin Ricchi, Jonathan Groff
                     </span>
                 </div>
-                <div className="director mt-1">
+                <div className="director mt-1 flex">
                     <span className='gray__txt text-xs mr-1 font-bold 2xl:text-sm'>Tags:</span>
                     <span className='text-white text-xs  2xl:text-sm'>
                     #watch the matrix resurrections free, #watch the matrix #resurrections hd, #the matrix resurrections online, #where to #watch the matrix resurrections, #the matrix resurrections free online, #neo noir, #cyberpunk, #fourth part, #tech noir, #the matrix resurrections, #part of series

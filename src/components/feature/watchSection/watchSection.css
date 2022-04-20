@@ -8,18 +8,30 @@
     text-transform: unset !important;
 }
 .serverCard{
-    border: 1px solid #605D65;
     border-radius: 8px;
-    width: 95%;
+    width: 100%;
     padding: 11px 20px 11px 15px;
     cursor: pointer;
 }
-.serverCard:hover{
-    background-color: #413F45 !important;
+.serversCard{
+    border: 1px solid #605D65;
+    border-radius: 8px;
+    width: 95%;
+}
+
+.serversCard:focus-within{
+    background-color: #782CE8;
 }
 .hero__social{
     border: 1px solid #605D65;
     padding: 3px 8px !important;
     border-radius: 8px;
     width: auto;
+}
+
+.watch__list__btn{
+    text-transform: none !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
 }

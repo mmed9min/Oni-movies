@@ -14,7 +14,7 @@
 }
 .heroCardImage{
     border-radius: 5px;
-    overflow: hidden;
+
     height: 100%;
     width: 100%;
     margin: 0;
@@ -223,7 +223,7 @@
         font-size: 20px !important;
         text-transform: unset !important;
         font-weight: 400 !important;
-        width: 8% !important;
+    
     }
 }
 

@@ -56,20 +56,18 @@ const blue = {
 const Tab = styled(TabUnstyled)`
   cursor: pointer;
   border-radius: 5px;
-
-
-
-
+  box-sizing: border-box;
+  overflow: hidden;
   &:focus {
     color: #fff;
     border-radius: 5px ;
     outline: none;
-    outline-offset: 2px;
+    outline-offset: 0px;
   }
 
   &.${tabUnstyledClasses.selected} {
     border : 2px solid #782CE8;
-    color: #fff;
+ 
   }
 
   &.${buttonUnstyledClasses.disabled} {
