@@ -52,7 +52,9 @@
     
     }
 }
-
+.mobileMenu{
+    color: #9D9AA2;
+}
 .searchMobile__icon{
     padding: 0 !important;
     margin: 0 !important;

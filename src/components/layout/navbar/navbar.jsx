@@ -37,8 +37,12 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ProfileMenu from "../../feature/profileMenu/profileMenu";
 
 
+import LogoutIcon from '@mui/icons-material/Logout';
+
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -86,46 +90,7 @@ const options = [
   {name : "Catch me"}
 ];
 
-const StyledMenu = styled((props) => (
-  <Menu
-    elevation={0}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'left',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'left',
-    }}
-    {...props}
-  />
-))(({ theme }) => ({
-  '& .MuiPaper-root': {
-    borderRadius: 6,
-    marginTop: theme.spacing(1),
-    minWidth: 180,
-    color: "white",
-    backgroundColor :"#413F45",
-    boxShadow:
-      'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-    '& .MuiMenu-list': {
-      padding: '4px 0',
-    },
-    '& .MuiMenuItem-root': {
-      '& .MuiSvgIcon-root': {
-        fontSize: 18,
-        color: theme.palette.text.secondary,
-        marginRight: theme.spacing(1.5),
-      },
-      '&:active': {
-        backgroundColor: alpha(
-          theme.palette.primary.main,
-          theme.palette.action.selectedOpacity,
-        ),
-      },
-    },
-  },
-}));
+
 
 
 function Navbar() {
@@ -139,16 +104,6 @@ function Navbar() {
 
   const [expanded, setExpanded] = React.useState('');
 
-
-  const [anchorMenu, setAnchorMenu] = React.useState(null);
-  const openMenu = Boolean(anchorMenu);
-
-  const handleClickMenu = (event) => {
-    setAnchorMenu(event.currentTarget);
-  };
-  const handleCloseMenu = () => {
-    setAnchorMenu(null);
-  };
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -323,42 +278,7 @@ function Navbar() {
 
          
            <div className="ml-5 lg:ml-8 relative">
-              <div className="flex">
-              <button 
-                   id="demo-customized-button"
-                   aria-controls={openMenu ? 'demo-customized-menu' : undefined}
-                   aria-haspopup="true"
-                   aria-expanded={openMenu ? 'true' : undefined}
-                   variant="contained"
-                   disableElevation
-                   onClick={openMenu ? handleCloseMenu : handleClickMenu}
-                   endIcon={<ArrowDropDownIcon />}
-                   type="button" className="max-w-xs ml-2 login__btn flex items-center text-sm focus:outline-none" >
-                  <img src={userIcon} alt="" />
-                </button>
-           
-    <StyledMenu
-      id="demo-customized-menu"
-      MenuListProps={{
-        'aria-labelledby': 'demo-customized-button',
-      }}
-      anchorEl={anchorMenu}
-      open={openMenu}
-      onClose={handleClose}
-    
-    >
-      <MenuItem onClick={()=> {handleCloseMenu()}} disableRipple >
-       Profile
-      </MenuItem>
-      <MenuItem onClick={()=> {handleCloseMenu()}}  disableRipple>
-        Watchlist
-      </MenuItem>
-      <MenuItem onClick={()=> {handleCloseMenu()}} disableRipple>
-        Sign out
-      </MenuItem>
-    </StyledMenu>
-                
-              </div>
+           <ProfileMenu />
 
             
               
@@ -542,24 +462,26 @@ function Navbar() {
                   </AccordionDetails>
                 </Accordion>
 
-               
-              </div>
-              <div className="ml-4  md:ml-6">
-            
+                <Divider style={{ background : "#9D9AA2", margin: "15px"}} />
 
-         
-           <div className="flex justify-center mt-6 relative ">
-              <div className="flex">
-                <h6 className="text-white font-medium mt-1  ">Login</h6>
-                <button type="button" className="max-w-xs ml-2 login__btn flex items-center text-sm focus:outline-none" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <img src={userIcon} alt="" />
-                </button>
+                <a
+                  href="#"
+                  className="text-gray-300  hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"
+                >
+                    <PermIdentityIcon className="text-gray-300  hover:text-white"   style={{fontSize: "21px"}}/>
+                    <span className="text-gray-300 ml-2 hover:text-white">Profile</span>
+                    
+                </a>
+                <a
+                  href="#"
+                  className="text-gray-300  hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"
+                >
+                    <LogoutIcon className="text-gray-300  hover:text-white"   style={{fontSize: "21px"}}/>
+                    <span className="text-gray-300 ml-2 hover:text-white">Sign out</span>
+                    
+                </a>
               </div>
-
-            
-              
-            </div>
-          </div>
+             
             </div>
           )}
         </Transition>
