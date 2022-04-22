@@ -142,7 +142,7 @@ const WatchSection = () => {
                         </TabsList>
                        
                     </TabsUnstyled>
-                    <div className="block sm:hidden">
+                    <div className="block sm:hidden mb-2">
                         <ItemsCarousel servers/>
                     </div>
                     <div className="hero__social flex items-center justify-between  lg:mt-0">

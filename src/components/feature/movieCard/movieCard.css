@@ -20,13 +20,17 @@ width: 100%;
     top: 40%;
     left: 40%;
 }
+.play__btn:hover{
+    background-color: #5C1DD9 !important;
+}
 .cardDetails{
     position: absolute;
     top: 0;
-    left: 101%;
+    left: 101.5%;
     z-index: 1000;
-    width: 200px;
-    border-radius: 5px;
+    width: 230px;
+    height: 280px;
+    border-radius: 8px;
     padding: 10px;
     background-color: #413F45;
 }

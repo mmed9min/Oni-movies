@@ -26,6 +26,9 @@
     border-radius: 8px;
     outline: unset;
 }
+.login__btn:hover{
+    background-color: #605D65;
+}
 .genre__txt{
     font-size: 14px;
     color: #9D9AA2;
@@ -52,9 +55,7 @@
     
     }
 }
-.mobileMenu{
-    color: #9D9AA2;
-}
+
 .searchMobile__icon{
     padding: 0 !important;
     margin: 0 !important;

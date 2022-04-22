@@ -97,7 +97,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [focus, setFocus] = useState("");
-
+ const [typing, setTyping] = useState("")
   const [placement, setPlacement] = React.useState();
 
   const [checked, setChecked] = React.useState(false);
@@ -230,50 +230,43 @@ function Navbar() {
             <div className="hidden md:block">
           <div className="nav__right ml-4 flex items-center md:ml-6">
           <label>
-          <Autocomplete
-       sx={{
-        display: 'inline-block',
-        margin : 0,
-        padding : 0,
+            <Autocomplete
+               sx={{
+                display: 'inline-block',
+                margin : 0,
+                padding : 0,
+        
+              }}
+              inputValue={typing}
+              onInputChange={(e) => setTyping(e.target.value)}
+              options={options}
+              fullWidth
+              PaperComponent={({ children }) => (
+                <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
+                  {children}
+                  <Button className="viewSearch__btn">View all</Button>
+                </Paper>
+              )}
+              disableCloseOnSelect
+              autoHighlight
+              getOptionLabel={(option) => option.name}
+              renderOption={(props, option) => (
+                
+                  <SearchCard name ={option.name}  {...props}/>
 
-        '& input': {
-       
-       
-        
-        },
-      
-      }}
-     
-      options={options}
-      fullWidth
-      PaperComponent={({ children }) => (
-        <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
-          {children}
-          <Button className="viewSearch__btn">View all</Button>
-        </Paper>
-      )}
-      disableCloseOnSelect
-      autoHighlight
-      getOptionLabel={(option) => option.name}
-      renderOption={(props, option) => (
-        
-          <SearchCard name ={option.name}  {...props}/>
-          
-       
-      )}
-      renderInput={(params) => (
-        <div className={"nav__search flex justify-between items-center p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
-      
-            <input type="text" placeholder="Search Oni"  {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
-          
-        <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
-        </div>
-     
-      )}
-    />
-  
-    
-    </label>
+              )}
+              renderInput={(params) => (
+                <div className={"nav__search flex justify-between items-center p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
+              
+                    <input type="text" placeholder="Search Oni"  onChange={(e)=> setTyping(e.target.value)}   {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
+                  
+                <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
+                </div>
+             
+              )}
+              open={typing.length > 0}
+             />
+           </label>
             
 
          
@@ -339,6 +332,7 @@ function Navbar() {
                       margin : 0,
                       padding : 0,
                     }}
+                    
                     options={options}
                     fullWidth
                     PaperComponent={({ children }) => (

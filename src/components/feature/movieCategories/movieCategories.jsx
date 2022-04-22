@@ -30,7 +30,7 @@ const Tab = styled(TabUnstyled)`
   color: #fff;
   cursor: pointer;
   font-size: 12px;
-
+  font-weight : 600;
   background-color: #413F45;
 
   padding: 5px 10px;

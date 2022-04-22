@@ -27,7 +27,7 @@ const SearchCard = (props) => {
     return (
         <>
    
-          <div className='hidden searchCard flex justify-between py-1'>
+          <div className=' searchCard flex justify-between py-1'>
           <NavLink  to="/watch">
             <div className='flex'>
                <img src={heroCarImage} className="mr-2 rounded-md" width="55px" height="90px" alt="" />
@@ -52,7 +52,7 @@ const SearchCard = (props) => {
 
 
 
-           <div className='searchCard flex justify-between '>
+           <div className='hidden searchCard flex justify-between '>
        
             <div className='flex'>
                <Skeleton sx={{ bgcolor: '#605D65' }} className="mr-2 rounded-lg"  variant="rectangular" width={100} height={94} />

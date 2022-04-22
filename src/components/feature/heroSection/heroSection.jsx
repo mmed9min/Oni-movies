@@ -57,6 +57,8 @@ const Tab = styled(TabUnstyled)`
   cursor: pointer;
   border-radius: 5px;
   box-sizing: border-box;
+  width: 100%;
+  border : 2px solid transparent;
   overflow: hidden;
   &:focus {
     color: #fff;

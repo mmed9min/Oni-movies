@@ -38,10 +38,10 @@ const [like, setLike] = useState(false);
                    Add to watchlist
                 </Button>)}
                 {like && (
-               <Button className='showCard__btn watchList__btn' onClick={handleUnlike}>
+               <Button className='showCard__btn watchList__btn inWatch' onClick={handleUnlike}>
               <img src={favorisFill} width="15px" className="mr-2" alt="" />
             
-                   Add to watchlist
+                   In watchlist
                 </Button>)}
                <Button className='showCard__btn trailer__btn'>
                    <img src={camera} width="15px"  className="mr-2" alt="" />

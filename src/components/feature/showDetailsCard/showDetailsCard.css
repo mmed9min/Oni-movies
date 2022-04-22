@@ -15,6 +15,12 @@
 .watchList__btn{
     background-color: #605D65 !important;
 }
+.inWatch{
+    background-color: #782CE8 !important;
+}
+.inWatch:hover{
+    background-color: #5C1DD9 !important;
+}
 .trailer__btn{
     border: 1px solid #605D65 !important;
 }

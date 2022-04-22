@@ -10,7 +10,7 @@
 
 }
 .heroCardImage__cont{
-    width: 40%;
+    width: 50%;
 }
 .heroCardImage{
     border-radius: 5px;
@@ -46,9 +46,7 @@
 
 
 
-.heroCards{
-    max-width: 50%;
-}
+
 
 
 .hero__movie__details{
@@ -72,6 +70,9 @@
     text-transform: unset !important;
     font-weight: 400 !important;
     width: 120px;
+}
+.watch__btn:hover{
+    background-color: #5C1DD9 !important;
 }
 .like__btn{
     background-color: #605D65 !important;
@@ -117,9 +118,24 @@
 @media screen and (max-width: 990px){
     .heroCards__row{
       
-        top: 94%;
+        top: 90% !important;
   
+        
     }
+    .heroCards{
+        max-width: 80%;
+    }
+    .hero__movie__details{
+        position: absolute;
+        top: 30%;
+    }
+    .heroImage > img{
+        width: 100vw !important;
+        height: 75vh !important;
+        border-radius: 8px;
+    
+    }
+ 
 
     .hero__social{
         border: 1px solid #605D65;
