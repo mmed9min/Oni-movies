@@ -8,7 +8,6 @@ width: 100%;
 }
 .movieCard{
     position: relative;
-
 }
 .play__btn{
     background-color: #782CE8 !important;
@@ -23,14 +22,13 @@ width: 100%;
 .play__btn:hover{
     background-color: #5C1DD9 !important;
 }
-.cardDetails{
-    position: absolute;
-    top: 0;
-    left: 101.5%;
-    z-index: 1000;
-    width: 230px;
-    height: 280px;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #413F45;
+.cardDetail{
+    height: 100% !important;
 }
+.tvBdg{
+    color: #fff;
+    font-weight: 700;
+    background-color: #413F45;
+    padding: 3px 5px;
+    border-radius: 4px;
+}       

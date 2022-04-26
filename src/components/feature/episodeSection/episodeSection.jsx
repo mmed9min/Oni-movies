@@ -40,7 +40,7 @@ const Tab = styled(TabUnstyled)`
   &.${tabUnstyledClasses.selected} {
     background: #782CE8;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #782CE8;
     &:hover{
         background-color: #782CE8 !important;
       }

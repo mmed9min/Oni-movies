@@ -94,7 +94,7 @@ const [like, setLike] = useState(false);
                    </div>
                    <div className="hero__movie__btns mt-2 md:mt-5 flex ">
                          <NavLink className="watch__btn text-center" to="/watch">
-                         <Button className='watch__btn mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
+                         <Button className='wtch__btn mr-2 '><img src={watch} className="mr-2" alt="" /> Watch</Button>
                         </NavLink>
                        {unlike && (
                            <BootstrapTooltip title="Add to watchlist">

@@ -133,42 +133,42 @@ function Navbar() {
   return (
     <div>
       <nav >
-        <div className="relative mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12">
+        <div className="relative mx-auto px-4 md:py-4 sm:px-6 lg:px-14 2xl:px-12">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <NavLink to="/">
                 <img
-                  width="55px"
+                  width="70px"
                   src={logo}
                   alt="Workflow"
                 />
                 </NavLink>
               </div>
               <div className="hidden md:block">
-                <div className="ml-5 lg:ml-10 flex items-baseline space-x-4">
+                <div className="ml-3 lg:ml-10 flex items-baseline space-x-1 lg:space-x-4">
                 <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
                   >
                     Channels
                   </a>
                   <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
                   >
                     Anime
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
                   >
                     Bollywood
                   </a>
                   <a
                       type="button" aria-describedby={id} variant="contained" onClick={handleClick}
-                     className="text-gray-300 cursor-pointer  hover:text-white px-1 py-2 rounded-md text-sm font-medium"
+                     className="text-gray-300 cursor-pointer  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
                    >
                     Genre
                     <FontAwesomeIcon icon={faChevronDown} className="ml-1" width="10px"/>
@@ -213,7 +213,7 @@ function Navbar() {
                      aria-haspopup="true"
                      aria-expanded={open ? 'true' : undefined}
                      onClick={handleClick}
-                     className="text-gray-300 cursor-pointer  hover:text-white px-1 py-2 rounded-md text-sm font-medium"
+                     className="text-gray-300 cursor-pointer  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
                    >
                     Imdb
                     <FontAwesomeIcon icon={faChevronDown} className="ml-1" width="10px"/>
@@ -244,7 +244,10 @@ function Navbar() {
               PaperComponent={({ children }) => (
                 <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
                   {children}
+                  <div className="flex justify-center">
                   <Button className="viewSearch__btn">View all</Button>
+                  </div>
+                 
                 </Paper>
               )}
               disableCloseOnSelect
@@ -258,7 +261,7 @@ function Navbar() {
               renderInput={(params) => (
                 <div className={"nav__search flex justify-between items-center p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
               
-                    <input type="text" placeholder="Search Oni"  onChange={(e)=> setTyping(e.target.value)}   {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
+                    <input type="text" placeholder="Search Oni"  {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
                   
                 <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
                 </div>
@@ -285,27 +288,13 @@ function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className=" inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none  "
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
                 {!isOpen ? (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z" fill="rgba(255,255,255,1)"/></svg>
                 ) : (
                   <svg
                     className="block h-6 w-6"
@@ -338,7 +327,9 @@ function Navbar() {
                     PaperComponent={({ children }) => (
                       <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
                         {children}
-                        <Button className="viewSearch__btn">View all</Button>
+                        <div className="flex justify-center">
+                  <Button className="viewSearch__btn">View all</Button>
+                  </div>
                       </Paper>
                     )}
                     disableCloseOnSelect

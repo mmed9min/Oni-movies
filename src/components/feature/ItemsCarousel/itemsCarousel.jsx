@@ -17,6 +17,7 @@ import TabsListUnstyled from '@mui/base/TabsListUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
+import { Button } from '@mui/material';
 
 
 const Tab = styled(TabUnstyled)`
@@ -119,6 +120,7 @@ const ItemsCarousel = (props) => {
                  <ServiceCard img={hbo} name ="Hbo MAX"/>
                  <ServiceCard img={peacecock} name ="Peacock"/>
                  <ServiceCard img={funimation} name ="Funimation"/>
+                 <Button className='viewAll__btn viewMobile'>View all services →</Button>
              
      
               

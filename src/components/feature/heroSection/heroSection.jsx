@@ -104,11 +104,11 @@ const handleChange = (event, newValue) => {
 
 
     return (
-        <div className='heroSection   mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-5'>
+        <div className='heroSection   mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-5 '>
     
    
             <TabsUnstyled className='hidden md:block' defaultValue={0}>
-              <TabsList className='tablist heroCards grid grid-cols-8 gap-2 mb-2 md:mb-0 ml-3 md:ml-5'>
+              <TabsList className='tablist heroCards grid grid-cols-8 gap-0 lg:gap-1 mb-2 md:mb-0 ml-3 md:ml-5'>
   
                   <Tab className='heroCardImage__cont'>
                    

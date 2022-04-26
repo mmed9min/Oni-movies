@@ -2,11 +2,21 @@ import React from 'react';
 import ShowDetailsCard from '../components/feature/showDetailsCard/showDetailsCard';
 import SimilairCard from '../components/feature/similairCards/similairCard';
 import WatchSection from '../components/feature/watchSection/watchSection';
+import { useEffect } from 'react';
 
 import Footer from '../components/layout/footer/footer';
 import Navbar from '../components/layout/navbar/navbar';
+import { useLocation, } from 'react-router-dom';
+
+
 
 const WatchPage = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, ["/watch"]);
+
+
     return (
         <div className='app__container '>
            <Navbar />
@@ -26,3 +36,4 @@ const WatchPage = () => {
 }
 
 export default WatchPage;
+

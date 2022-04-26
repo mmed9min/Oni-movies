@@ -30,22 +30,22 @@ const SearchCard = (props) => {
           <div className=' searchCard flex justify-between py-1'>
           <NavLink  to="/watch">
             <div className='flex'>
-               <img src={heroCarImage} className="mr-2 rounded-md" width="55px" height="90px" alt="" />
+               <img src={heroCarImage} className="mr-2 rounded-md" width="80px" height="90px" alt="" />
           
                <div className="searchCard__details grid content-between">
-                   <span className='text-white text-sm'>{props.name}</span>
-                   <span className='gray__txt text-xs'>1999</span>
-                   <span className='gray__txt text-xs'>2h 19min</span>
+                   <span className='text-white text-xl'>{props.name}</span>
+                   <span className='gray__txt text-lg'>1999</span>
+                   <span className='gray__txt text-lg'>2h 19min</span>
                    <div className="flex">
-                       <span className='text-white text-xs mr-1'>9.1</span>
-                       <img src={star} width="10px" alt="" />
+                       <span className='text-white text-lg mr-1'>9.1</span>
+                       <img src={star} width="15px" alt="" />
                    </div>
                </div>
             </div>
             </NavLink>
             <div>
-              {unlike && (<img onClick={handleLike} src={likeIcon} width="12px" alt="" />)}
-              {like && (<img onClick={handleUnlike} src={unLikeIcon} width="12px" alt="" />)}
+              {unlike && (<img onClick={handleLike} src={likeIcon} width="15px" alt="" />)}
+              {like && (<img onClick={handleUnlike} src={unLikeIcon} width="15px" alt="" />)}
             </div>
               
            </div>

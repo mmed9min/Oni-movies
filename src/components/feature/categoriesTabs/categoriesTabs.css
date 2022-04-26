@@ -1,19 +1,24 @@
 .categoriesTabs{
-    margin-top: 5rem;
+    margin-top: 7rem;
   
    
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 1490px){
     .categoriesTabs{
-        margin-top: 2rem;
+        margin-top: 5rem;
      
        
     }
 }
 
-@media screen and (min-width: 1490px){
+
+
+
+
+
+@media screen and (max-width: 520px){
     .categoriesTabs{
-        margin-top: 8rem;
+        margin-top: 2rem;
      
        
     }

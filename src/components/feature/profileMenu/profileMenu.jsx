@@ -90,7 +90,7 @@ export default function ProfileMenu() {
          disableElevation
          onClick={handleClickMenu}
          endIcon={<ArrowDropDownIcon />}
-         type="button" className="max-w-xs ml-2 login__btn flex items-center text-sm focus:outline-none" >
+         type="button" className="max-w-xs ml-2 login__btn flex items-center text-sm focus:outline-none flex items-center justify-center" >
         <img src={userIcon} alt="" />
       </button>
  
