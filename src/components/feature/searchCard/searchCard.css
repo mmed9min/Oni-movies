@@ -30,3 +30,21 @@
 .viewSearch__btn:hover{
     background-color: #5C1DD9 !important;
 }
+
+.searchCard__img{
+    width: 90px;
+    height: 130px;
+}
+@media screen and (max-width: 1124px){
+    .searchCard__img{
+        width: 70px;
+        height: 90px;
+    }
+    .searchCard__txt{
+        font-size: small !important;
+        line-height: 22px !important;
+    }
+}
+@media screen and (max-width: 768px){
+   
+}

@@ -118,6 +118,21 @@
     color: white !important;
     white-space: nowrap !important;
 }
+@media screen and (max-width: 1590px){
+    .heroImage > img{
+        width: 100vw !important;
+        height: 37rem !important;
+        border-radius: 8px;
+    
+    }
+    .heroImage__shadow:before {
+        height: 37rem;
+    }
+    .heroImage{
+        width: 100%;
+        height: 37rem;
+    }
+}
 @media screen and (max-width: 990px){
     .heroCards__row{
       
@@ -139,16 +154,16 @@
     }
     .heroImage > img{
         width: 100vw !important;
-        height: 55vh !important;
+        height: 27rem !important;
         border-radius: 8px;
     
     }
     .heroImage{
         width: 100%;
-        height: 55vh;
+        height: 27rem;
     }
     .heroImage__shadow:before {
-        height: 55vh;
+        height: 27rem;
     }
  
 
@@ -210,16 +225,16 @@
     }
     .heroImage{
         width: 100%;
-        height: 40vh;
+        height: 16rem;
     }
     .heroImage > img{
         width: 100% !important;
-        height: 39vh !important;
+        height: 16rem !important;
         border-radius: 8px;
     
     }
     .heroImage__shadow:before {
-        height: 40vh;
+        height:16rem;
     }
 }
 @media screen and (max-width: 520px){
@@ -227,17 +242,17 @@
         width: 100%; 
     }
     .heroImage > img{
-        width: 100% !important;
-        height: 37vh !important;
+        width: 100vw !important;
+        height: 15rem !important;
         border-radius: 8px;
     
     }
     .heroImage__shadow:before {
-        height: 37vh;
+        height: 15rem;
     }
     .heroImage{
         width: 100%;
-        height: 37vh;
+        height: 15rem;
     }
     .watch__btn{
         background-color: #782CE8 !important;
@@ -249,6 +264,7 @@
  
     }
 }
+
 @media screen and (min-width: 1490px){
     .heroCards__row{
       

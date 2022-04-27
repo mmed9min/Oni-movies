@@ -139,7 +139,7 @@ function Navbar() {
               <div className="flex-shrink-0">
                 <NavLink to="/">
                 <img
-                  width="70px"
+                  width="60px"
                   src={logo}
                   alt="Workflow"
                 />
@@ -149,26 +149,26 @@ function Navbar() {
                 <div className="ml-3 lg:ml-10 flex items-baseline space-x-1 lg:space-x-4">
                 <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
+                    className="text-gray-300  hover:text-white md:px-1 py-2 rounded-md text-xs md:text-sm xl:text-lg font-medium"
                   >
                     Channels
                   </a>
                   <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
+                    className="text-gray-300  hover:text-white md:px-1 py-2 rounded-md text-xs mdtext-sm xl:text-lg font-medium"
                   >
                     Anime
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-300  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
+                    className="text-gray-300  hover:text-white md:px-1 py-2 rounded-md text-xs  md:text-sm xl:text-lg font-medium"
                   >
                     Bollywood
                   </a>
                   <a
                       type="button" aria-describedby={id} variant="contained" onClick={handleClick}
-                     className="text-gray-300 cursor-pointer  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
+                     className="text-gray-300 cursor-pointer  hover:text-white md:px-1 py-2 rounded-md text-xs md:text-sm xl:text-lg font-medium whitespace-nowrap"
                    >
                     Genre
                     <FontAwesomeIcon icon={faChevronDown} className="ml-1" width="10px"/>
@@ -213,7 +213,7 @@ function Navbar() {
                      aria-haspopup="true"
                      aria-expanded={open ? 'true' : undefined}
                      onClick={handleClick}
-                     className="text-gray-300 cursor-pointer  hover:text-white px-1 py-2 rounded-md text-sm md:text-lg font-medium"
+                     className="text-gray-300 cursor-pointer  hover:text-white md:px-1 py-2 rounded-md text-xs md:text-sm xl:text-lg font-medium"
                    >
                     Imdb
                     <FontAwesomeIcon icon={faChevronDown} className="ml-1" width="10px"/>
@@ -228,7 +228,7 @@ function Navbar() {
               </div>
             </div>
             <div className="hidden md:block">
-          <div className="nav__right ml-4 flex items-center md:ml-6">
+          <div className="nav__right ml-0 lg:ml-4 flex items-center">
           <label>
             <Autocomplete
                sx={{
@@ -237,7 +237,7 @@ function Navbar() {
                 padding : 0,
         
               }}
-              inputValue={typing}
+            
               onInputChange={(e) => setTyping(e.target.value)}
               options={options}
               fullWidth
@@ -273,7 +273,7 @@ function Navbar() {
             
 
          
-           <div className="ml-5 lg:ml-8 relative">
+           <div className="ml-0 md:ml-5 lg:ml-8 relative">
            <ProfileMenu />
 
             
@@ -321,7 +321,7 @@ function Navbar() {
                       margin : 0,
                       padding : 0,
                     }}
-                    
+                    onInputChange={(e) => setTyping(e.target.value)}
                     options={options}
                     fullWidth
                     PaperComponent={({ children }) => (
