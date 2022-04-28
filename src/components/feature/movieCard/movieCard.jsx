@@ -18,8 +18,8 @@ const HtmlTooltip = styled(({ className, ...props }) => (
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: '#413F45',
-    height: "300px",
-    maxWidth: 240,
+    height: "392px",
+    maxWidth: "320px",
     position : "relative",
     margin : 0,
 
@@ -65,7 +65,7 @@ const MovieCard = (props) => {
       >
         
         
-         <div className='movieCard cursor-pointer' >
+         <div className='movieCard cursor-pointer mb-5 sm:mb-3' >
           <img src={props.movieImg} className="movieCard__img" alt=""  /> 
           {hover && (
             <NavLink className="watch__btn text-center" to="/watch">

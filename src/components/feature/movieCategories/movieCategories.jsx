@@ -103,7 +103,7 @@ const MovieCategories = (props) => {
                  
       
       <TabPanel value={0}>
-        <div className='grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-3 '>
+        <div className='grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 '>
           {props.type=== "Movies" &&(<>
           <MovieCard movieImg={movieImg1}/>
           <MovieCard movieImg={movieImg1}/>
@@ -136,7 +136,7 @@ const MovieCategories = (props) => {
         
       </TabPanel>
       <TabPanel value={1}>
-        <div className='grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-3 '>
+        <div className='grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 '>
         {props.type=== "Movies" &&(<>
          <MovieCard movieImg={movieImg2}/>
          <MovieCard movieImg={movieImg2}/>
@@ -182,7 +182,7 @@ const MovieCategories = (props) => {
         </div>
       </TabPanel>
       <TabPanel value={2}>
-      <div className='grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-3 '>
+      <div className='grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 '>
       {props.type=== "Movies" &&(<>
         <MovieCard movieImg={movieImg3}/>
         <MovieCard movieImg={movieImg3}/>

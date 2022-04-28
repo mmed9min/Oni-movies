@@ -68,14 +68,17 @@
     color: white !important;
     font-size: 14px !important;
     text-transform: unset !important;
-    font-weight: 400 !important;
-    width: 146px
+    font-weight: 600 !important;
+    width: 146px;
+    height: 56px;
 }
 .watch__btn:hover{
     background-color: #5C1DD9 !important;
 }
 .wtch__btn{
     font-size: 16px !important;
+    width: 146px !important;
+    height: 56px !important;
 }
 .like__btn{
     background-color: #605D65 !important;
@@ -261,7 +264,12 @@
         font-size: 15px !important;
         text-transform: unset !important;
         font-weight: 400 !important;
- 
+        width: 114px;
+        height: 36px;
+    }
+    .wtch__btn{
+        width: 114px !important;
+        height: 36px !important;
     }
 }
 

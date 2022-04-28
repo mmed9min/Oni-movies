@@ -111,6 +111,7 @@ function Navbar() {
 
   const handleSearchMobile = () => {
     setChecked((prev) => !prev);
+    setIsOpen(false)
   };
 
   const handleClick = (event) => {
@@ -286,7 +287,7 @@ function Navbar() {
                 <FontAwesomeIcon className="searchMobile__icon" size="xl" icon={faSearch}/>
               </Button>
               <button
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => {setIsOpen(!isOpen); setChecked(false)}}
                 type="button"
                 className=" inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none  "
                 aria-controls="mobile-menu"

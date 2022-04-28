@@ -40,32 +40,32 @@ const CardDetail = () => {
         setUnlike(true)
     }
     return (
-        <div className='cardDetail'>
+        <div className='cardDetail p-2'>
         
         <div className='cardDetail' >
         <div className=" flex justify-between">
-             <span className='text-white text-lg lg:text-xl font-bold'>The Batman</span>
+             <span className='text-white text-lg lg:text-2xl font-bold'>The Batman</span>
              <div className="flex items-center">
                  <img className='mr-1' src={star} alt="" />
                  <span className='text-white text-xs lg:text-sm font-bold'>9.1</span>
              </div>
          </div>
          <div className="flex mt-3">
-             <span className='gray__txt mr-3 text-xs lg:text-sm font-bold'>2022</span>
+             <span className='gray__txt mr-3 text-xs lg:text-lg font-bold'>2022</span>
              <img src={time} width="15px" alt="" />
-             <span className='text-white ml-1 text-xs lg:text-sm font-bold'>1h 31 min</span>
+             <span className='text-white ml-1 text-xs lg:text-lg font-bold'>1h 31 min</span>
          </div>
          <div className="grid grid-cols-4 gap-2 mt-3">
-             <span className='gray__txt text-xs lg:text-sm font-bold'>Action</span>
-             <span className='gray__txt text-xs lg:text-sm font-bold'>Action</span>
-             <span className='gray__txt text-xs lg:text-sm whitespace-nowrap font-bold'>Adventure</span>
+             <span className='gray__txt text-xs lg:text-lg font-bold'>Action</span>
+             <span className='gray__txt text-xs lg:text-lg font-bold'>Action</span>
+             <span className='gray__txt text-xs lg:text-lg whitespace-nowrap font-bold'>Adventure</span>
          </div>
          <div className="cardDetail__descrip mt-3">
-             <p className='text-xs lg:text-sm text-white'>
+             <p className='text-xs lg:text-lg text-white'>
              When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.
              </p>
          </div>
-         <div className="cardDetail__btns flex items-center w-full absolute bottom-2 right-3 left-2">
+         <div className="cardDetail__btns flex items-center w-full absolute bottom-2 right-3 left-4">
          <NavLink className="watch__btn text-center watchDetail" to="/watch">
             <Button className='wtch__btn mr-2 flex items-center'><img src={watch} className="mr-2" alt="" /> Watch</Button>
         </NavLink>

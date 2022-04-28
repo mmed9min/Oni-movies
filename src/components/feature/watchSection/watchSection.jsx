@@ -104,7 +104,7 @@ const WatchSection = () => {
             <div className='heroImage'>
                 <img src={heroImg} alt="" />
             </div>
-            <div className="watch__control flex justify-between items-center mt-1 px-2">
+            <div className="watch__control flex justify-between items-center mt-5 mb-5 md:mb-1 md:mt-1 px-2">
                 <div className="flex">
                     <div className="autoPlay flex items-center hidden sm:block">
                        <Checkbox className='w-8' {...label} icon={<CircleOutlined sx={{color: "#fff",fontSize:"21px"}} />} checkedIcon={<Circle sx={{color: "#782CE8", fontSize:"19px", border :"2px solid #fff", borderRadius : "50%",padding : "1px"}} />} />
@@ -132,20 +132,23 @@ const WatchSection = () => {
                 </Button>
             </div>
             <div className="servers__section mt-3">
-                <span className='gray__txt text-xs'>Select Server: </span>
+                
              
-                <div className="flex flex-col lg:flex-row justify-between sm:items-center mt-1">
+                <div className="flex flex-col-reverse lg:flex-row justify-between sm:items-center mt-1">
+                    
                   <TabsUnstyled className='hidden sm:block' defaultValue={0}>
-                   
-                        <TabsList className="hidden sm:grid grid-cols-5 lg:grid-cols-5 gap-2 servers w-70 h-10">
+                  <span className='gray__txt text-xs mb-4'>Select Server: </span>
+                        <TabsList className="hidden sm:grid grid-cols-5 lg:grid-cols-5 gap-2 servers w-70 h-10 mt-2">
+                       
                         {servers.map((server)=> <Tab><ServerCard serverName={server.name}/></Tab>)}
                         </TabsList>
                        
                     </TabsUnstyled>
-                    <div className="block sm:hidden mb-2">
+                    <div className="block sm:hidden mb-2 mt-8">
+                    <span className='gray__txt text-xs'>Select Server: </span>
                         <ItemsCarousel servers/>
                     </div>
-                    <div className="hero__social flex items-center justify-between  lg:mt-0">
+                    <div className="hero__social flex items-center justify-between  lg:mt-0 ">
                        <span className='text-white text-sm mr-2 whitespace-nowrap'>Share :</span>
                        <img className='mr-2 w-5' src={wtsp} alt="" />
                        <img className='mr-2 w-5' src={msngr} alt="" />

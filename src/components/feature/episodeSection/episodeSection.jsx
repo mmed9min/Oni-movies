@@ -27,6 +27,7 @@ const Tab = styled(TabUnstyled)`
   box-sizing: border-box;
   border: 1px solid #605D65;
   white-space: nowrap;
+  width: fit-content;
   padding : "5px 20px"
   &:focus {
     color: #fff;
@@ -191,11 +192,11 @@ export default function EpisodeSection() {
       </MenuItem>
     </StyledMenu>
 
-    <div className='mt-2 epSection'>
+    <div className='mt-3 epSection'>
     {season === "Season 1" && (
         <TabsUnstyled className='epSection'  defaultValue={0}>
                    
-        <TabsList className="flex sm:flex-row eps flex-wrap gap-2">
+        <TabsList className="flex flex-col   sm:flex-row eps flex-wrap gap-2">
         {season1Eps.map((ep)=> <Tab><EpCard epName={ep.name}/></Tab>)}
         </TabsList>
        
@@ -204,7 +205,7 @@ export default function EpisodeSection() {
       {season === "Season 2" && (
         <TabsUnstyled  defaultValue={0}>
                    
-        <TabsList className="flex eps flex-wrap gap-2">
+        <TabsList className="flex flex-col   sm:flex-row eps flex-wrap gap-2">
         {season2Eps.map((ep)=> <Tab><EpCard epName={ep.name}/></Tab>)}
         </TabsList>
        
@@ -213,7 +214,7 @@ export default function EpisodeSection() {
       {season === "Season 3" && (
         <TabsUnstyled  defaultValue={0}>
                    
-        <TabsList className="flex eps flex-wrap gap-2">
+        <TabsList className="flex flex-col   sm:flex-row eps flex-wrap gap-2">
         {season3Eps.map((ep)=> <Tab><EpCard epName={ep.name}/></Tab>)}
         </TabsList>
        

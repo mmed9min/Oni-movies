@@ -107,7 +107,7 @@ const   responsive = {
 const ItemsCarousel = (props) => {
 
     return (
-        <div>
+        <div className='mt-2'>
      {props.services && (
         <Carousel responsive={responsive}    autoPlay={false} >
             
