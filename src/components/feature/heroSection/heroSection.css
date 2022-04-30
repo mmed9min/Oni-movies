@@ -135,6 +135,9 @@
         width: 100%;
         height: 37rem;
     }
+    .hero__social{
+        width: 55%;
+    }
 }
 @media screen and (max-width: 990px){
     .heroCards__row{
@@ -174,7 +177,7 @@
         border: 1px solid #605D65;
         padding: 5px 8px;
         border-radius: 8px;
-      width: 43%;
+      width: 60%;
     }
   
     .watch__btn{
@@ -241,14 +244,15 @@
     }
 }
 @media screen and (max-width: 520px){
-    .hero__social{
-        width: 100%; 
-    }
+    
     .heroImage > img{
         width: 100vw !important;
         height: 15rem !important;
         border-radius: 8px;
     
+    }
+    .hero__social{
+        width: 90%;
     }
     .heroImage__shadow:before {
         height: 15rem;
@@ -272,6 +276,14 @@
         height: 36px !important;
     }
 }
+@media screen and (max-width: 480px){
+    .hero__social{
+        width: 100%;
+    }
+    .epCard{
+        height: 32px;
+    }
+}
 
 @media screen and (min-width: 1490px){
     .heroCards__row{
@@ -280,7 +292,7 @@
   
     }
    .hero__social{
-       width: 25%;
+       width: 40%;
    }
     .watch__btn{
         background-color: #782CE8 !important;

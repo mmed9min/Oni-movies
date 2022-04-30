@@ -100,17 +100,17 @@ const CategoriesTabs = () => {
       </TabsList>
       <TabPanel value={0}>
         <div className='grid  grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-4  '>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
         </div>
         
       </TabPanel>

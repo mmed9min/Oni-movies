@@ -3,6 +3,7 @@
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
+    height: 64px !important;
 }
 .serviceCard:hover{
     background-color: #413F45;

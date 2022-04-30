@@ -104,15 +104,15 @@ const WatchSection = () => {
             <div className='heroImage'>
                 <img src={heroImg} alt="" />
             </div>
-            <div className="watch__control flex justify-between items-center mt-5 mb-5 md:mb-1 md:mt-1 px-2">
+            <div className="watch__control flex justify-between items-center mt-5 mb-5 md:mb-1 md:mt-1 px-2 py-6">
                 <div className="flex">
                     <div className="autoPlay flex items-center hidden sm:block">
-                       <Checkbox className='w-8' {...label} icon={<CircleOutlined sx={{color: "#fff",fontSize:"21px"}} />} checkedIcon={<Circle sx={{color: "#782CE8", fontSize:"19px", border :"2px solid #fff", borderRadius : "50%",padding : "1px"}} />} />
-                       <span className='text-white text-xs'>Auto Play</span>
+                       <Checkbox className='w-8' {...label} icon={<CircleOutlined sx={{color: "#fff",fontSize:"23px"}} />} checkedIcon={<Circle sx={{color: "#782CE8", fontSize:"22px", border :"3px solid #fff", borderRadius : "50%"}} />} />
+                       <span className='text-white text-md'>Auto Play</span>
                     </div>
                     <div className="autoPlay flex items-center ml-2 hidden sm:block">
-                       <Checkbox className='w-8' {...label} icon={<ModeNight sx={{color: "#9D9AA2", transform : "rotate(160deg)",fontSize: "20px"}} />} checkedIcon={<ModeNight sx={{color: "#782CE8",transform : "rotate(160deg)",fontSize: "20px"}} />} />
-                       <span className='text-white text-xs'>Night mode</span>
+                       <Checkbox className='w-8' {...label} icon={<ModeNight sx={{color: "#9D9AA2", transform : "rotate(160deg)",fontSize: "24px"}} />} checkedIcon={<ModeNight sx={{color: "#782CE8",transform : "rotate(160deg)",fontSize: "24px"}} />} />
+                       <span className='text-white text-md'>Night mode</span>
                     </div>
                     <div className='sm:hidden'>
                         {unlike && ( <Button className='watch__list__btn flex items-center' onClick={handleLike}>
@@ -127,20 +127,20 @@ const WatchSection = () => {
                 </div>
        
                 <Button className='flex items-center report__btn'>
-                    <img src={report} width="16px" alt="" />
-                    <span className='text-white text-sm md:text-xs ml-2 font-bold'>Report</span>
+                    <img src={report} width="20px" alt="" />
+                    <span className='text-white text-md ml-2 font-bold'>Report</span>
                 </Button>
             </div>
             <div className="servers__section mt-3">
                 
              
-                <div className="flex flex-col-reverse lg:flex-row justify-between sm:items-center mt-1">
+                <div className="flex flex-col-reverse lg:flex-row justify-between sm:items-center mt-5">
                     
-                  <TabsUnstyled className='hidden sm:block' defaultValue={0}>
-                  <span className='gray__txt text-xs mb-4'>Select Server: </span>
-                        <TabsList className="hidden sm:grid grid-cols-5 lg:grid-cols-5 gap-2 servers w-70 h-10 mt-2">
+                  <TabsUnstyled className='epSection w-full hidden sm:block' defaultValue={0}>
+                  <span className='gray__txt text-md mb-4'>Select Server: </span>
+                        <TabsList className="flex flex-col   sm:flex-row eps flex-wrap gap-2  mt-2">
                        
-                        {servers.map((server)=> <Tab><ServerCard serverName={server.name}/></Tab>)}
+                        {servers.map((server)=> <Tab className='serverCard'><ServerCard serverName={server.name}/></Tab>)}
                         </TabsList>
                        
                     </TabsUnstyled>
@@ -160,7 +160,7 @@ const WatchSection = () => {
                     </div>
                 </div>
             </div>
-            <div className='mt-3'>
+            <div className='mt-10 mb-10'>
                <EpisodeSection />
             </div>
         </div>

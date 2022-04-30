@@ -1,3 +1,20 @@
 .serverCard__focus{
    background-color: #782CE8;
 }
+.serverCard{
+   height: 64px;
+}
+
+.servCard{
+   border: 1px solid #605D65;
+   border-radius: 8px;
+   height: 64px;
+   width: 95%;
+}
+
+.servCard:hover{
+   background-color: #413F45;
+}
+.serv{
+   height: 100%;
+}

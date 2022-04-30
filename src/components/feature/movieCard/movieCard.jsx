@@ -14,7 +14,7 @@ import { styled } from '@mui/material/styles';
 
 
 const HtmlTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} placement="right-start" sx={{marginLeft: "-100px"}}/>
+  <Tooltip {...props} classes={{ popper: className }} placement="right-start" />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: '#413F45',
@@ -51,11 +51,11 @@ const MovieCard = (props) => {
 
     return (
         <div>
-      <HtmlTooltip className="hidden md:block"
+      <HtmlTooltip className="hidden md:block mt-10"
       onMouseEnter={handleHover} onMouseLeave={handleUnhover}
         title={
           <React.Fragment>
-            <Typography color="inherit">
+            <Typography color="inherit"  onMouseEnter={handleHover} onMouseLeave={handleUnhover}>
           
             <CardDetail />
             </Typography>
@@ -65,16 +65,24 @@ const MovieCard = (props) => {
       >
         
         
-         <div className='movieCard cursor-pointer mb-5 sm:mb-3' >
-          <img src={props.movieImg} className="movieCard__img" alt=""  /> 
-          {hover && (
+         <div className='movieCard cursor-pointer mb-6 ' >
+           <div className='movieOverlay'>
+           {hover && (
             <NavLink className="watch__btn text-center" to="/watch">
               <button className="play__btn flex items-center justify-center">
-                <img src={play} width="10px"   alt="" />
+                <img src={play} width="16px"   alt="" />
               </button>
             </NavLink>
     
           )}
+          <div>
+          <img src={props.movieImg} className="movieCard__img relative" alt=""  />
+          {props.resolution &&(<span className='absolute top-3 left-3 resolution__badge'>{props.resolution}</span>)}
+          </div>
+             
+           </div>
+           
+        
           
           <div className="movieCard__infos mt-2">
               <span className='movieCard__title text-white font-bold'>Jackass Forever</span>

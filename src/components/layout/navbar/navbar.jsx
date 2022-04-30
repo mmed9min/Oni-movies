@@ -99,7 +99,7 @@ function Navbar() {
   const [focus, setFocus] = useState("");
  const [typing, setTyping] = useState("")
   const [placement, setPlacement] = React.useState();
-
+ const [outside, setOutside] = useState(false)
   const [checked, setChecked] = React.useState(false);
 
   const [expanded, setExpanded] = React.useState('');
@@ -127,6 +127,10 @@ function Navbar() {
   const handleUnfocus =()=>{
     setFocus("")
     }
+
+    const handleClickAway = () => {
+      setOutside(false);
+    };
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
@@ -236,40 +240,43 @@ function Navbar() {
                 display: 'inline-block',
                 margin : 0,
                 padding : 0,
-        
               }}
-            
-              onInputChange={(e) => setTyping(e.target.value)}
+              id="desk"
+          
+              onInputChange={(e) => {setTyping(e.target.value); setOutside(true)}}
               options={options}
               fullWidth
-              PaperComponent={({ children }) => (
-                <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
-                  {children}
-                  <div className="flex justify-center">
-                  <Button className="viewSearch__btn">View all</Button>
-                  </div>
-                 
-                </Paper>
-              )}
               disableCloseOnSelect
+              PaperComponent={({ children }) => (
+                <ClickAwayListener onClickAway={handleClickAway}>
+                <Paper    style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
+                  {children}
+                  <div className="flex justify-center hidden md:flex">
+                    <Button className="viewSearch__btn">View all</Button>
+                  </div>
+                </Paper>
+                </ClickAwayListener>
+              )}
+            
               autoHighlight
               getOptionLabel={(option) => option.name}
               renderOption={(props, option) => (
                 
                   <SearchCard name ={option.name}  {...props}/>
-
+                  
+               
               )}
               renderInput={(params) => (
-                <div className={"nav__search flex justify-between items-center p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
+                <div className={"nav__search flex justify-between items-center h-11 p-0 m-0"+ " "+ focus} ref={params.InputProps.ref} >
               
                     <input type="text" placeholder="Search Oni"  {...params.inputProps}   className="nav__search__input"  autoFocus={false} />
-                  
-                <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
+                    <FontAwesomeIcon icon={faSearch} color="#9D9AA2"/>
+          
                 </div>
              
               )}
-              open={typing.length > 0}
-             />
+              open={outside}
+               />
            </label>
             
 
@@ -322,18 +329,20 @@ function Navbar() {
                       margin : 0,
                       padding : 0,
                     }}
-                    onInputChange={(e) => setTyping(e.target.value)}
+                    id="mob"
+                    onInputChange={(e) => {setTyping(e.target.value); setOutside(true)}}
                     options={options}
                     fullWidth
+                    disableCloseOnSelect
                     PaperComponent={({ children }) => (
-                      <Paper style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
+                      <Paper    style={{ background: "#413F45" ,marginTop: "5px",padding: "0"}}>
                         {children}
-                        <div className="flex justify-center">
-                  <Button className="viewSearch__btn">View all</Button>
-                  </div>
+                        <div className="flex justify-center md:hidden">
+                          <Button className="viewSearch__btn">View all</Button>
+                        </div>
                       </Paper>
                     )}
-                    disableCloseOnSelect
+                  
                     autoHighlight
                     getOptionLabel={(option) => option.name}
                     renderOption={(props, option) => (
@@ -351,6 +360,7 @@ function Navbar() {
                       </div>
                    
                     )}
+                    open={outside}
                 />
   
     

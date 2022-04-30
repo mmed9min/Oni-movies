@@ -134,7 +134,7 @@ const ItemsCarousel = (props) => {
                 
 
            
-                   {servers.map((server)=> <div className='serversCard'><ServerCard serverName={server.name}/></div>)}
+                   {servers.map((server)=> <div className='servCard'><ServerCard serverName={server.name}/></div>)}
                   
                 
 

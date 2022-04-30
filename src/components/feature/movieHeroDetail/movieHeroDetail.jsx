@@ -86,8 +86,9 @@ const [like, setLike] = useState(false);
                            <span className='text-white text-sm font-medium ml-1 2xl:text-xl'>{props.duration}</span>
                        </div>
                    </div>
-                   <div className="hero__movie__title md:mt-4 mb-1  md:mb-4 ">
+                   <div className="hero__movie__title md:mt-4 mb-1  md:mb-4 flex items-start">
                        <h1 className='text-lg md:text-2xl md:text-5xl text-white font-bold 2xl:text-7xl'>{props.title}</h1>
+                       {props.resolution &&(<span className='resolution__badge self-end mb-2 ml-4'>{props.resolution}</span>)}
                    </div>
                    <div className="hero__movie__descrip hidden md:block">
                        <p className='text-white text-xs md:text-sm   2xl:text-xl'>{props.description}</p>

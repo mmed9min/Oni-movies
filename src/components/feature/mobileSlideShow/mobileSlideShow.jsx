@@ -81,6 +81,7 @@ export default function Slideshow() {
                   duration ="1h 31 min"
                   rating="6.7"
                   type={["Adventure", "Sci-fi"]}
+                  resolution="HD"
                 />
           </div>
         ))}

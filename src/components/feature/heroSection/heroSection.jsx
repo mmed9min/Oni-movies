@@ -55,20 +55,20 @@ const blue = {
 
 const Tab = styled(TabUnstyled)`
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   box-sizing: border-box;
   width: 100%;
-  border : 2px solid transparent;
+  border : 4px solid transparent;
   overflow: hidden;
   &:focus {
     color: #fff;
-    border-radius: 5px ;
+    border-radius: 8px ;
     outline: none;
     outline-offset: 0px;
   }
 
   &.${tabUnstyledClasses.selected} {
-    border : 2px solid #782CE8;
+    border : 4px solid #782CE8;
  
   }
 
@@ -165,6 +165,7 @@ const handleChange = (event, newValue) => {
                   duration ="1h 31 min"
                   rating="6.7"
                   type={["Adventure", "Sci-fi"]}
+                  resolution="HD"
                 />
                </TabPanel>
                <TabPanel value={1}>
@@ -175,6 +176,7 @@ const handleChange = (event, newValue) => {
                   duration ="2h 04 min"
                   rating="8.5"
                   type={["Action", "Drama"]}
+                  resolution="FHD"
                 />
                </TabPanel>
                <TabPanel value={2}>
@@ -185,6 +187,7 @@ const handleChange = (event, newValue) => {
                   duration ="2h 04 min"
                   rating="8.2"
                   type={["Action", "Adventure", "Drama"]}
+                  resolution="CAM"
                 />
                </TabPanel>
                <TabPanel value={3}>

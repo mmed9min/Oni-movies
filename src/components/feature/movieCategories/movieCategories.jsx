@@ -105,31 +105,31 @@ const MovieCategories = (props) => {
       <TabPanel value={0}>
         <div className='grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-4 '>
           {props.type=== "Movies" &&(<>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
-          <MovieCard movieImg={movieImg1}/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
+          <MovieCard movieImg={movieImg1} resolution="HD"/>
           </>
           )}
             {props.type=== "Series" &&(<>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
-          <MovieCard series movieImg={movieImg1}/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
+          <MovieCard series movieImg={movieImg1} resolution="CAM"/>
           </>
           )}
         </div>

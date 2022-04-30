@@ -33,7 +33,7 @@
 
 .searchCard__img{
     width: 90px;
-    height: 130px;
+    height: 120px;
 }
 @media screen and (max-width: 1124px){
     .searchCard__img{
@@ -43,6 +43,10 @@
     .searchCard__txt{
         font-size: small !important;
         line-height: 22px !important;
+    }
+    .viewSearch__btn{
+        font-size: 14px !important;
+        height: 40px;
     }
 }
 @media screen and (max-width: 768px){
