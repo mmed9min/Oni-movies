@@ -59,7 +59,7 @@
 
 .hero__type__txt{
     color: #9D9AA2;
-    font-weight: 500;
+
 }
 
 .watch__btn{
@@ -97,9 +97,9 @@
 
 .hero__social{
     border: 1px solid #605D65;
-    padding: 5px 8px;
+    padding: 6px 8px !important;
     border-radius: 8px;
-    width: 100%;
+    width: 398px !important;
 }
 .heroImage{
     width: 100%;
@@ -113,13 +113,16 @@
 }
 
 .copy__btn{
-    background-color: #605D65 !important;
+    background-color: #413F45 !important;
     border-radius: 4px    !important;
-    font-weight: 400 !important;
-    height: 30px !important;
+    font-weight: 500 !important;
+    height: 24px !important;
     text-transform: none !important;
     color: white !important;
     white-space: nowrap !important;
+    width: 84px !important;
+    font-size: 12px !important;
+
 }
 @media screen and (max-width: 1590px){
     .heroImage > img{
@@ -136,7 +139,7 @@
         height: 37rem;
     }
     .hero__social{
-        width: 55%;
+        width: 398px !important;
     }
 }
 @media screen and (max-width: 990px){
@@ -175,9 +178,10 @@
 
     .hero__social{
         border: 1px solid #605D65;
-        padding: 5px 8px;
+     
         border-radius: 8px;
-      width: 60%;
+      width: 300px !important;
+    
     }
   
     .watch__btn{
@@ -205,9 +209,9 @@
     }
     .hero__social{
         border: 1px solid #605D65;
-        padding: 5px 8px;
+
         border-radius: 8px;
-       width: 70%;
+       width: 398px;
     }
     .heroCards{
         max-width: 75%;
@@ -231,7 +235,7 @@
     }
     .heroImage{
         width: 100%;
-        height: 16rem;
+        height: 16rem !important;
     }
     .heroImage > img{
         width: 100% !important;
@@ -240,7 +244,7 @@
     
     }
     .heroImage__shadow:before {
-        height:16rem;
+        height:16rem !important;
     }
 }
 @media screen and (max-width: 520px){
@@ -252,7 +256,7 @@
     
     }
     .hero__social{
-        width: 90%;
+        width: 330px !important;
     }
     .heroImage__shadow:before {
         height: 15rem;
@@ -276,9 +280,9 @@
         height: 36px !important;
     }
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 430px){
     .hero__social{
-        width: 100%;
+      width: 100% !important;
     }
     .epCard{
         height: 32px;
@@ -292,7 +296,7 @@
   
     }
    .hero__social{
-       width: 40%;
+       width: 398px !important;
    }
     .watch__btn{
         background-color: #782CE8 !important;

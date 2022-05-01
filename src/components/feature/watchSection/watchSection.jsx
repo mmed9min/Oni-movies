@@ -27,6 +27,7 @@ import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 import EpisodeSection from '../episodeSection/episodeSection';
+import ShareSocial from '../shareSocial/shareSocial';
 
 
 const Tab = styled(TabUnstyled)`
@@ -134,7 +135,7 @@ const WatchSection = () => {
             <div className="servers__section mt-3">
                 
              
-                <div className="flex flex-col-reverse lg:flex-row justify-between sm:items-center mt-5">
+                <div className="flex flex-col-reverse lg:flex-row justify-between lg:items-center  mt-5">
                     
                   <TabsUnstyled className='epSection w-full hidden sm:block' defaultValue={0}>
                   <span className='gray__txt text-md mb-4'>Select Server: </span>
@@ -148,16 +149,10 @@ const WatchSection = () => {
                     <span className='gray__txt text-xs'>Select Server: </span>
                         <ItemsCarousel servers/>
                     </div>
-                    <div className="hero__social flex items-center justify-between  lg:mt-0 ">
-                       <span className='text-white text-sm mr-2 whitespace-nowrap'>Share :</span>
-                       <img className='mr-2 w-5' src={wtsp} alt="" />
-                       <img className='mr-2 w-5' src={msngr} alt="" />
-                       <img className='mr-2 w-5' src={pint} alt="" />
-                       <img className='mr-2 w-5' src={reddit} alt="" />
-                       <img className='mr-2 w-5' src={fcbk} alt="" />
-                       <img className='mr-2 w-5' src={twitt} alt="" />
-                    <Button className='flex items-center copy__btn '><img src={copy} alt="" className='mr-2' /><span>Copy link</span></Button>
+                    <div className='w-full flex justify-end'>
+                      <ShareSocial />
                     </div>
+                    
                 </div>
             </div>
             <div className='mt-10 mb-10'>

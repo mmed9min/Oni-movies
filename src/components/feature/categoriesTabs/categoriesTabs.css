@@ -12,7 +12,13 @@
 }
 
 
-
+@media screen and (max-width: 768px){
+    .categoriesTabs{
+        margin-top: 2rem;
+     
+       
+    }
+}
 
 
 

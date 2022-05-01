@@ -43,7 +43,7 @@ const SearchCard = (props) => {
                </div>
             </div>
             </NavLink>
-            <div>
+            <div className='mt-1'>
               {unlike && (<img onClick={handleLike} src={likeIcon} width="18px" alt="" />)}
               {like && (<img onClick={handleUnlike} src={unLikeIcon} width="18px" alt="" />)}
             </div>

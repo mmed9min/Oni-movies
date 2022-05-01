@@ -30,16 +30,17 @@ const Tab = styled(TabUnstyled)`
   color: #fff;
   cursor: pointer;
   font-size: 12px;
-  font-weight : 600;
+  font-weight : 700 !important;
   background-color: #413F45;
 
-  padding: 5px 10px;
+  padding: 8px 15px;
   margin-right: 7px;
  
   border-radius : 8px;
   display: flex;
 
   white-space : nowrap;
+  height: 32px;
 
   &:hover {
     background-color: #9d9aa222;

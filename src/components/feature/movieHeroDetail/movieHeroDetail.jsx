@@ -76,14 +76,14 @@ const [like, setLike] = useState(false);
                        <div className="hero__movie__rating flex mr-2 mb-1 md:mb-0 items-center">
                            <img src={imdp} alt="" className='mr-2  h-5 md:h-6 2xl:h-10'  />
                            <img src={star} className="mr-1 w-4 md:w-4 2xl:w-6" alt="" />
-                           <span className='text-white text-xs md:text-md md:text-lg 2xl:text-2xl font-medium '>{props.rating}</span>
+                           <span className='text-white text-xs md:text-md md:text-lg 2xl:text-2xl font-bold '>{props.rating}</span>
                        </div>
                        <div className="hero__movie__type mr-3 mb-1 md:mb-0">
-                           {props.type.map((type)=> <span className='text-sm hero__type__txt mr-2 2xl:text-xl '>{type}</span>)}
+                           {props.type.map((type)=> <span className='text-sm hero__type__txt mr-2 2xl:text-xl font-bold'>{type}</span>)}
                        </div>
                        <div className="hero__movie__time flex items-center mb-1 md:mb-0">
                            <img src={time} className="w-4 md:w-6 2xl:w-8" alt="" />
-                           <span className='text-white text-sm font-medium ml-1 2xl:text-xl'>{props.duration}</span>
+                           <span className='text-white text-sm font-bold ml-1 2xl:text-xl'>{props.duration}</span>
                        </div>
                    </div>
                    <div className="hero__movie__title md:mt-4 mb-1  md:mb-4 flex items-start">
