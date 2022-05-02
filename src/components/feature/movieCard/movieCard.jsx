@@ -14,13 +14,14 @@ import { styled } from '@mui/material/styles';
 
 
 const HtmlTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} placement="right-start" />
+  <Tooltip {...props} classes={{ popper: className }}  placement="right-start" />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: '#413F45',
     height: "392px",
-    maxWidth: "320px",
-    position : "relative",
+    width : "320px !important",
+    position : "absolute",
+    top : "70px",
     margin : 0,
 
   },

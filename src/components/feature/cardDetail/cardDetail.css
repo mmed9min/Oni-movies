@@ -29,3 +29,13 @@
     margin-top: -25px !important;
     margin-bottom: -10px !important;
 }
+
+.showDesc{
+    word-break: break-word;
+   overflow: hidden;
+   text-overflow: ellipsis !important;
+   display: -webkit-box;
+
+   -webkit-line-clamp: 6; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}

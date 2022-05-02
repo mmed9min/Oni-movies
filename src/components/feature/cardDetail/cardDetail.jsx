@@ -43,11 +43,11 @@ const CardDetail = () => {
         <div className='cardDetail p-2'>
         
         <div className='cardDetail' >
-        <div className=" flex justify-between">
+        <div className=" flex justify-between items-center">
              <span className='text-white text-2xl font-bold'>The Batman</span>
              <div className="flex items-center">
-                 <img className='mr-1' src={star} alt="" />
-                 <span className='text-white text-sm font-bold'>9.1</span>
+                 <img className='mr-1' width="12px" height="12px" src={star} alt="" />
+                 <span className='text-white text-xs font-bold h-3'>9.1</span>
              </div>
          </div>
          <div className="flex mt-3">
@@ -61,11 +61,13 @@ const CardDetail = () => {
              <span className='gray__txt  text-lg whitespace-nowrap font-bold'>Adventure</span>
          </div>
          <div className="cardDetail__descrip mt-3">
-             <p className='text-lg text-white'>
+             <p className='text-lg text-white showDesc'>
              When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.
+             When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.
+
              </p>
          </div>
-         <div className="cardDetail__btns flex items-center w-full absolute bottom-2 right-3 left-4">
+         <div className="cardDetail__btns flex items-center w-full absolute bottom-2  right-3 left-4">
          <NavLink className="watch__btn text-center watchDetail" to="/watch">
             <Button className='wtch__btn mr-2 flex items-center'><img src={watch} className="mr-2" alt="" /> Watch</Button>
         </NavLink>

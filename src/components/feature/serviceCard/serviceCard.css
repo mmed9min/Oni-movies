@@ -16,6 +16,7 @@
     font-size: 14px !important;
     font-weight: 700 !important;
     height: 100%;
+    white-space: nowrap;
     width: 100%;
 }
 .viewMobile{
