@@ -88,9 +88,9 @@ const MovieCard = (props) => {
               <span className='movieCard__title text-white font-bold'>Jackass Forever</span>
               <div className="movieCard__details flex justify-between items-center mt-1">
                   {props.series && (<span className='movieCard__details__txt tvBdg text-xs'>TV</span>)}
-                  {!props.series && (<span className='movieCard__details__txt text-xs'>2021</span>)}
-                  {props.series && (<span className='movieCard__details__txt text-xs'>S3 · Ep 21</span>)}
-                  {!props.series && (<span className='movieCard__details__txt text-xs'>1h 31min</span>)}
+                  {!props.series && (<span className='movieCard__details__txt text-xs font-bold'>2021</span>)}
+                  {props.series && (<span className='movieCard__details__txt text-xs font-bold'>S3 · Ep 21</span>)}
+                  {!props.series && (<span className='movieCard__details__txt text-xs font-bold'>1h 31min</span>)}
                   <span className='flex items-center'><img src={star} width="10px" alt="" /><span className='text-white ml-1 text-xs font-bold'>7.2</span></span>
               </div>
           </div>

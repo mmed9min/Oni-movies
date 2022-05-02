@@ -34,9 +34,9 @@
     background-color: #605D65;
 }
 .genre__txt{
-    font-size: 14px;
+    font-size: 16px;
     color: #9D9AA2;
-    font-weight: 500;
+    font-weight: 700;
 }
 .genre__txt:hover{
     color: white;

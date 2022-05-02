@@ -9,14 +9,24 @@
      
        
     }
+    .categoTabs{
+        font-size: 16px !important;
+        padding: 8px 10px !important;
+    }
 }
 
-
+@media screen and (max-width: 980px){
+  
+}
 @media screen and (max-width: 768px){
     .categoriesTabs{
         margin-top: 2rem;
      
        
+    }
+    .categoTabs{
+        font-size: 16px !important;
+        padding: 8px 10px !important;
     }
 }
 

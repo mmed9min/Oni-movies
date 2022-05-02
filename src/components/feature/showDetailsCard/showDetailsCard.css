@@ -2,13 +2,17 @@
     background-color: hsl(260, 5%, 26%);
     border-radius: 8px;
 }
+.showImg{
+    width: 206px;
+    height: 302px;
+}
 .showCard__btn{
-    width: 100%;
+    width: 206px;
     color: #fff !important;
     text-transform: unset !important;
     margin-top: 5px !important;
     padding: 6px 25px;
-    font-weight: 400 !important;
+    font-weight: 700 !important;
     border-radius: 8px !important;
     font-size: 16px !important;
     height: 48px;
@@ -25,12 +29,7 @@
 .trailer__btn{
     border: 1px solid #605D65 !important;
 }
-.showCard__first{
-    width: 30%;
-}
-.showCard__sec{
-    width: 70%;
-}
+
 
 @media screen and (max-width: 528px){
     .showCard__btn{

@@ -29,8 +29,8 @@ const Tab = styled(TabUnstyled)`
   font-family: IBM Plex Sans, sans-serif;
   color: #9D9AA2;
   cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 700;
   background-color: transparent;
 
   padding: 12px 16px;
@@ -54,7 +54,7 @@ const Tab = styled(TabUnstyled)`
   }
 
   &.${tabUnstyledClasses.selected} {
-    border-bottom : 2px solid #782CE8;
+    border-bottom : 4px solid #782CE8;
     color: #fff;
   }
 
@@ -93,10 +93,10 @@ const CategoriesTabs = () => {
         
              <TabsUnstyled defaultValue={0}>
       <TabsList>
-        <Tab>Popular</Tab>
-        <Tab>Series</Tab>
-        <Tab>Anime</Tab>
-        <Tab>Bollywood</Tab>
+        <Tab className='categoTabs'>Popular</Tab>
+        <Tab className='categoTabs'>Series</Tab>
+        <Tab className='categoTabs'>Anime</Tab>
+        <Tab className='categoTabs'>Bollywood</Tab>
       </TabsList>
       <TabPanel value={0}>
         <div className='grid  grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:gap-4  '>

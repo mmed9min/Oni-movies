@@ -27,28 +27,43 @@ const SearchCard = (props) => {
     return (
         <>
    
-          <div className=' searchCard flex justify-between py-1'>
-          <NavLink  to="/watch">
+        <div className='searchCard px-3 py-2'>
+         
             <div className='flex'>
-               <img src={heroCarImage} className="mr-2 rounded-md searchCard__img "  alt="" />
+            <NavLink to="/watch">
+               <div className='searchCard__img rounded-md mr-4'>
+                 <img src={heroCarImage}   alt="" />
+               </div>
+            </NavLink>
           
-               <div className="searchCard__details grid content-between searchCard__txt">
-                   <span className='text-white text-xl searchCard__txt'>{props.name}</span>
-                   <span className='gray__txt text-lg searchCard__txt'>1999</span>
-                   <span className='gray__txt text-lg searchCard__txt'>2h 19min</span>
-                   <div className="flex">
-                       <span className='text-white text-lg mr-1 searchCard__txt'>9.1</span>
-                       <img src={star}  alt="" />
+               <div className=" grid content-between searchCard__txt flex flex-col basis-4/5 searchCard__details">
+                   <div className="flex grow justify-between items-center ">
+                     <NavLink to="/watch">
+                       <span className='text-white text-lg searchCard__txt'>{props.name}</span>
+                     </NavLink>
+                     <div className='ml-auto'>
+                       {unlike && (<img onClick={handleLike} src={likeIcon} width="14px" alt="" />)}
+                       {like && (<img onClick={handleUnlike} src={unLikeIcon} width="14px" alt="" />)}
+                     </div>
                    </div>
+                   <NavLink to="/watch">
+                   <div className="flex flex-col">
+                   <span className='gray__txt text-sm searchCard__txt'>1999</span>
+                   <span className='gray__txt text-sm searchCard__txt'>2h 19min</span>
+                    </div>    
+                   
+                   <div className="flex">
+                       <span className='text-white text-sm mr-1 searchCard__txt'>9.1</span>
+                       <img src={star} width="12px" alt="" />
+                   </div>
+                   </NavLink>
                </div>
             </div>
-            </NavLink>
-            <div className='mt-1'>
-              {unlike && (<img onClick={handleLike} src={likeIcon} width="18px" alt="" />)}
-              {like && (<img onClick={handleUnlike} src={unLikeIcon} width="18px" alt="" />)}
-            </div>
+         
+        </div>
+           
               
-           </div>
+   
 
 
 

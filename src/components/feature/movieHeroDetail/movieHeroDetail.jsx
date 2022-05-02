@@ -76,7 +76,7 @@ const [like, setLike] = useState(false);
                        <div className="hero__movie__rating flex mr-2 mb-1 md:mb-0 items-center">
                            <img src={imdp} alt="" className='mr-2  h-5 md:h-6 2xl:h-10'  />
                            <img src={star} className="mr-1 w-4 md:w-4 2xl:w-6" alt="" />
-                           <span className='text-white text-xs md:text-md md:text-lg 2xl:text-2xl font-bold '>{props.rating}</span>
+                           <span className='text-white text-sm md:text-md md:text-lg 2xl:text-2xl font-bold'>{props.rating}</span>
                        </div>
                        <div className="hero__movie__type mr-3 mb-1 md:mb-0">
                            {props.type.map((type)=> <span className='text-sm hero__type__txt mr-2 2xl:text-xl font-bold'>{type}</span>)}
@@ -87,7 +87,7 @@ const [like, setLike] = useState(false);
                        </div>
                    </div>
                    <div className="hero__movie__title md:mt-4 mb-1  md:mb-4 flex items-start">
-                       <h1 className='text-lg md:text-2xl md:text-5xl text-white font-bold 2xl:text-7xl'>{props.title}</h1>
+                       <h1 className='text-lg md:text-2xl md:text-5xl text-white font-bold 2xl:text-7xl tracking-wider'>{props.title}</h1>
                        {props.resolution &&(<span className='resolution__badge self-end mb-2 ml-4'>{props.resolution}</span>)}
                    </div>
                    <div className="hero__movie__descrip hidden md:block">
@@ -99,9 +99,9 @@ const [like, setLike] = useState(false);
                         </NavLink>
                        {unlike && (
                            <BootstrapTooltip title="Add to watchlist">
-                       <Button className='like__btn ml-2'><img src={favoris} onClick={handleLike}   alt="" /></Button>
+                       <Button className='like__btn ml-2'><img src={favoris} width="17px" onClick={handleLike}   alt="" /></Button>
                        </BootstrapTooltip>)}
-                       {like && (<Button className='unLike__btn ml-2'><img src={favorisFill} onClick={handleUnlike}   alt="" /></Button>)}
+                       {like && (<Button className='unLike__btn ml-2'><img src={favorisFill} width="17px" onClick={handleUnlike}   alt="" /></Button>)}
                    </div>
                </div> 
         </div>
