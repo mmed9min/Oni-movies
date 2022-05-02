@@ -19,15 +19,42 @@
     white-space: nowrap;
     width: 100%;
 }
-.viewMobile{
-    font-size: 16px !important;
+.serviceImg{
+    width: 40%;
+}
+@media screen and (max-width : 1520px){
+   .viewAll__btn{
+       font-size: 8px !important;
+       height: 40px !important;
+   }
+   .serviceCard{
+       height: 40px !important;
+   }
+   .serviceCard > span{
+   font-size: 9px;
+  
+   }
+   .serviceImg{
+       width: 33%;
+   }
 }
 .viewAll__btn:hover{
     background-color: #5C1DD9 !important;
 }
 
-@media screen and (max-width : 530px){
-    serviceImg{
-        
+@media screen and (max-width : 1023px){
+    .viewAll__btn{
+        font-size: 14px !important;
+        height: 64px !important;
+    }
+    .serviceCard{
+        height: 64px !important;
+    }
+    .serviceCard > span{
+    font-size: 14px;
+   
+    }
+    .serviceImg{
+        width: 25%;
     }
 }

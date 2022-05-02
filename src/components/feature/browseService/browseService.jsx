@@ -15,7 +15,7 @@ const BrowseService = () => {
     return (
         <div className='mx-auto px-4 sm:px-6 lg:px-14 2xl:px-12 mt-7 borwseService'>
            <span className='text-white text-xl font-bold'>Browse by service</span> 
-           <div className='hidden md:grid  grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-4 mt-4'>
+           <div className='hidden md:grid  grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-2  2xl:gap-4 mt-4'>
                <ServiceCard img={netflix} name ="Netflix"/>
                <ServiceCard img={prime} name ="Prime video"/>
                <ServiceCard img={disney} name ="Disnep +"/>
