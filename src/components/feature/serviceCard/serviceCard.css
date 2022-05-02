@@ -22,7 +22,7 @@
 .serviceImg{
     width: 40%;
 }
-@media screen and (max-width : 1520px){
+@media screen and (max-width : 1620px){
    .viewAll__btn{
        font-size: 8px !important;
        height: 40px !important;
